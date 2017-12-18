@@ -1,0 +1,47 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textsc{vra}-\textit{ph} $\Rightarrow$ \textit{headed-ph} \& \\
+\begin{avm} 
+[cat & [head & @{1} [select & [cont &    [anchors &  <..., [ind & @{10}], ...> \\ rels & @{A} ]]]\\
+									  val & @{2}\\
+									  mrkg & @{9}]\\
+						 cont & [hook & [ind & @{7}] \\ rels & <@{11}, @{12}> & $\oplus$ @{D}]\\
+						 c-cont & [rels & <@{12}[\tp{sum-subpart-rel}\\
+							 										subpart & @{7} event\\
+							 										sum & @{6} event]>]\\
+hd-dtr & @{4}[\tp{cluster-ph}\\ ss & @{3} [cat & [head & @{1}\\
+																	val & @{2}\\
+																	mrkg & unmarked]\\
+													 cont & [hook & [ind & @{7}]\\
+																				anchors & <..., [ind & @{8}], ...> \\ rels & @{C}]\\
+													 fragment & [source [hook & [ind & @{6}] \\ rels & @{A}]\\
+													  						abstract-cont  @{B}]\\
+									 ]\\
+									 ]\\
+dtrs & <[cat & [head & [select & @3] \\ mrkg & @{9}]\\
+	      cont & [hook & [ltop & @{5}]\\
+								rels & < @{11}[\tp{sum-subpart-rel}\\
+												label & @{5}\\
+												subpart & @{8}\\
+							 					sum & @{10}]>]], @{4}>]
+													
+\end{avm}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textsc{dintre}-\textit{word} $\Rightarrow$ \textit{word} \& \\
+\begin{avm}
+[cat & [head & [\tp{preposition}\\
+								xarg & @{1}\\
+								select & [cat & [head & [\tp{noun}\\
+																 case & direct]]\\
+										cont & [anchors & <..., [ind & @{3}], ...>]]]\\
+				mrkg & dintre \\
+				val & [comps & <@{2}>]\\
+				arg-st & <@{1}[cat & [head & noun\\
+														  val & [spr & <>]]\\
+											 cont & [hook &[ind & @{3}]]], @{2}[cat & [head & noun\\
+														  																	 val & [spr & <>]]\\
+											 																		cont & [hook &[ind & @{4}]]\\
+																													rel & \{@{4}\}]>]\\
+cont & [hook & [ltop & @{5}]\\
+				rels & <[\tp{partitioning-sum-subpart-rel}\\
+                 label & @{5}\\
+                 subpart & @{3}\\
+                 sum & @{4}]>]]
+\end{avm}
+\end{document}

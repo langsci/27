@@ -1,0 +1,105 @@
+% ecltree+.sty, Version 1.2, March 2002
+%
+% Author: dm@ling.osu.edu
+%
+% Loads epic, eepic, and ecltree and adds some extra commands
+% useful for trees in linguistics.
+
+
+\input{epic.sty}
+\makeatletter % epic.sty switches at the end to \makeatother
+\input{eepic.sty}
+\input{ecltree.sty}
+
+% changed definition of bundle by raising toplabel a little
+\def\bundle#1{\leavevmode\hbox\bgroup%
+          \endlinechar=-1%
+          \def\@TopLabel{\raisebox{1ex}{#1}}% changed wdm
+          \def\@HandleList{}%
+          \def\@EdgeLabels{}%
+          \edef\@EdgeLabelsY{\expandafter\@RemoveDim\the\EdgeLabelSep}%
+          \unitlength=\p@%
+          \@BundleWidth=\z@%
+%          \@BundleHeight=-1.5ex%  wdm added, since looks better in foiltex
+          \@BundleDepth=\z@%
+          \ignorespaces}
+
+% new \XY command as compact way for specifying GapWidth and GapDepth (wdm)
+\newcommand{\XY}[2]{\setlength{\GapWidth}{#1em}\setlength{\GapDepth}{#2ex}}
+
+ % for trees with marked functions
+\newsavebox{\headLabel}
+\newsavebox{\nonheadLabel}
+\newsavebox{\compLabel}
+\newsavebox{\compoptLabel}
+\newsavebox{\compplusLabel}
+\newsavebox{\compstarLabel}
+\newsavebox{\subjLabel}
+\newsavebox{\sprLabel}
+\newsavebox{\adjLabel}
+\newsavebox{\markLabel}
+\newsavebox{\fillerLabel}
+\newsavebox{\govLabel}
+
+\newcommand{\labelStyle}[1]{\textsc{#1}}
+
+% labels are defined here as command, since after a change
+% to \labelStyle we need to make new label sboxes for the
+% changes to have an effect
+\newcommand{\makeTreeLabels}{%
+  \sbox{\headLabel}{\labelStyle{h}}
+  \sbox{\nonheadLabel}{\labelStyle{h}}
+  \sbox{\compLabel}{\labelStyle{c}}
+  \sbox{\compoptLabel}{\labelStyle{(c)}}
+  \sbox{\compplusLabel}{\labelStyle{c$^+$}}
+  \sbox{\compstarLabel}{\labelStyle{c$^*$}}
+  \sbox{\subjLabel}{\labelStyle{s}}
+  \sbox{\sprLabel}{\labelStyle{spr}}
+  \sbox{\adjLabel}{\labelStyle{a}}
+  \sbox{\markLabel}{\labelStyle{m}}
+  \sbox{\fillerLabel}{\labelStyle{f}}
+  \sbox{\govLabel}{\labelStyle{g}}}
+
+\makeTreeLabels
+
+\newcommand{\head}[1]{\chunk[\usebox{\headLabel}]{#1}}
+\newcommand{\nonhead}[1]{\chunk[\usebox{\nonheadLabel}]{#1}}
+\newcommand{\comp}[1]{\chunk[\usebox{\compLabel}]{#1}}
+\newcommand{\compopt}[1]{\chunk[\usebox{\compoptLabel}]{#1}}
+\newcommand{\compplus}[1]{\chunk[\usebox{\compplusLabel}]{#1}}
+\newcommand{\compstar}[1]{\chunk[\usebox{\compstarLabel}]{#1}}
+\newcommand{\subj}[1]{\chunk[\usebox{\subjLabel}]{#1}}
+\newcommand{\spr}[1]{\chunk[\usebox{\sprLabel}]{#1}}
+\newcommand{\adj}[1]{\chunk[\usebox{\adjLabel}]{#1}}
+\newcommand{\marker}[1]{\chunk[\usebox{\markLabel}]{#1}}
+\newcommand{\filler}[1]{\chunk[\usebox{\fillerLabel}]{#1}}
+\newcommand{\governed}[1]{\chunk[\usebox{\govLabel}]{#1}}
+
+\newcommand{\baum}[2]{\begin{bundle}{\raisebox{1ex}{#1}}#2\end{bundle}}
+\newcommand{\ibaum}[2]{\chunk{\baum{#1}{#2}}}
+
+\newcommand{\hbaum}[2]{\head{\baum{#1}{#2}}}
+\newcommand{\nbaum}[2]{\nonhead{\baum{#1}{#2}}}
+\newcommand{\cbaum}[2]{\comp{\baum{#1}{#2}}}
+\newcommand{\coptbaum}[2]{\compopt{\baum{#1}{#2}}}
+\newcommand{\cplusbaum}[2]{\comp{\baum{#1}{#2}}}
+\newcommand{\cstarbaum}[2]{\comp{\baum{#1}{#2}}}
+\newcommand{\sbaum}[2]{\subj{\baum{#1}{#2}}}
+\newcommand{\abaum}[2]{\adj{\baum{#1}{#2}}}
+\newcommand{\mbaum}[2]{\marker{\baum{#1}{#2}}}
+\newcommand{\sprbaum}[2]{\spr{\baum{#1}{#2}}}
+\newcommand{\fbaum}[2]{\filler{\baum{#1}{#2}}}
+\newcommand{\gbaum}[2]{\governed{\baum{#1}{#2}}}
+
+% Breite des Baumes
+\setlength{\GapWidth}{2em}
+
+% Tiefe des Baumes
+\setlength{\GapDepth}{5ex}
+
+% H"ohe der Labels "uber Knoten:
+\setlength{\EdgeLabelSep}{.5\GapDepth}
+
+
+\newcommand{\wichtig}[1]{\fbox{#1}}
+\newcommand{\clash}[1]{\wichtig{#1}}

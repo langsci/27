@@ -1,0 +1,78 @@
+\documentclass[preview,border={2pt 2pt 15pt 0cm}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+
+\newcommand{\AVMNPsix}{\begin{Avm}{NP}
+		\[\tp{head-functor-ph}\]
+\end{Avm}}
+\newcommand{\AVMNPseven}{\begin{avm} \@1NP$_i$
+\end{avm}}
+\newcommand{\AVMSthree}{\begin{Avm}{S}
+		\[head & \[select & \@{1} \] \\ mrkg & dont \\ slash & \{ \} \] 
+\end{Avm}}
+\newcommand{\AVMCompr}{\begin{Avm}{Compr}
+		\[head & \[vform & \@{2}\]\\ mrkg & dont \\ comps & \<\@{3}\>\\ bind & \{\@{4}\} \\ slash & \{\} \]
+\end{Avm}}
+\newcommand{\AVMSfour}{\begin{Avm}{S}
+		\@{3}\[vform & \@{2} tensed \\ subj & \< \>\\ slash & \{\@{4}PP$_i$[\textnormal{\textit{de}}] \}\\ mrkg & unmarked \]
+\end{Avm}}
+\newcommand{\AVMNPeight}{\begin{Avm}{NP}
+\end{Avm}}
+\newcommand{\AVMVtwo}{\begin{Avm}{V}
+		\[slash & \{\@{4}\}\]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}[hbcd]
+%		\begin{center}
+			\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+		\begin{bundle}{\AVMNPsix}
+			
+			\chunk[HD]{\setlength{\GapDepth}{30pt}
+				\begin{bundle}{\AVMNPseven}
+					\chunk{l'histoire}
+				\end{bundle}
+			}
+			
+			\chunk[FCT]{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMSthree}
+					\chunk[HD]{
+						\begin{bundle}{\AVMCompr}
+							\chunk{dont}
+						\end{bundle}
+					}
+					
+					\chunk[COMPS]{
+						\begin{bundle}{\AVMSfour}
+							\chunk[SUBJ]{
+								\begin{bundle}{\AVMNPeight}
+									\chunk{Marie}
+								\end{bundle}
+							}
+							
+							\chunk[HD]{
+								\begin{bundle}{\AVMVtwo}
+									\chunk{parle}
+							\end{bundle}}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+			
+		\end{bundle}
+%	\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

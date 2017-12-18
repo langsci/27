@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{coord-phrase} $\Rightarrow$
+\begin{avm}
+[synsem & [head / @H\\
+						 valence @V\\
+						 slash @S]\\
+ dtrs & <[head / @H\\
+					valence @V\\
+					slash @S],...,
+					[head / @H\\
+					valence @V\\
+					slash @S]>]
+\end{avm}
+\end{document}

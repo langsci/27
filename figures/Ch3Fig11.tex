@@ -1,0 +1,71 @@
+\documentclass[preview, border={3cm 1pt .75cm 0cm}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPseven}{\begin{Avm}{XP}
+		\[\tp{head-functor-ph} \\ ss & \[ head & \@{6} noun \\ mrkg & \@{7} \\ rel & \{\@{4}\} \] \] 
+\end{Avm}}
+
+\newcommand{\AVMPPtwo}{\begin{Avm}{PP}
+		\[\tp{head-comps-ph} \\ ss & \[ head & \[select & \@{1}  \] \\ mrkg & \@{7}\\ rel & \{\@{4}\} \] \] 
+\end{Avm}}
+
+\newcommand{\AVMPrepone}{\begin{Avm}{Prep}
+		\[cat & \[head & \[select & \@{1} \[cont & \[anchors & \<\[ind & \@{3}\]\>\]\]\] \\ mrkg & \@{7}\\ val & \[comps & \<\@{2}\>\] \\ arg-st & \<\@{1}, \@{2}\> \] \\
+		cont & \[ltop & \@{5} \\ rels & \<\[\tp{sum-subpart-rel} \\ label & \@{5} \\ subpart & \@{3} \\ sum & \@{4} \] \> \] \]
+\end{Avm}}
+
+\newcommand{\AVMNPfour}{\begin{Avm}{NP}
+		\[ss &\@{2}\[cat & \[head & noun\]\\ cont & \[ind & \@{4}\] \\ rel & \{\@{4}\}\] \]
+\end{Avm}}
+
+\newcommand{\AVMXPeight}{\begin{Avm}{XP}
+		\[\tp{head-fragment-ph} \\ ss &\@{1}\[cat & \[head & \@{6} noun\]\\ cont & \[ind & \@{3}\] \]\] 
+\end{Avm}}
+
+\newcommand{\AVMXPeightbis}{\begin{Avm}{XP} 
+\end{Avm}}
+\newcommand{\AVMNPsecond}{\begin{Avm}{NP} 
+\end{Avm}}        							 
+
+\smallAvmFonts
+%\begin{figure}[hbcd]
+%	\begin{center}
+		\setlength{\GapWidth}{100pt}\setlength{\GapDepth}{30pt}
+		\begin{bundle}{\AVMXPseven}     	  			
+			\chunk[FCT]{\setlength{\GapWidth}{140pt}\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMPPtwo}
+					\chunk[HD]{
+						\begin{bundle}{\AVMPrepone}
+							\chunk{parmi}
+					\end{bundle}}
+					\chunk[COMPS]{
+						\begin{bundle}{\AVMNPfour}
+							\chunk{lesquelles}
+					\end{bundle}}
+			\end{bundle}}
+			\chunk[HD]{\setlength{\GapDepth}{15pt}
+				\begin{bundle}{\AVMXPeight}
+					\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMXPeightbis}
+							\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMNPsecond}
+									\chunk{Marie}
+							\end{bundle}}
+					\end{bundle}}
+			\end{bundle}}
+		\end{bundle}
+		
+%	\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

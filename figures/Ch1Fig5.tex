@@ -1,0 +1,64 @@
+\documentclass[preview=true]{standalone}
+% \usepackage[latin1]{inputenc}
+%\documentclass[twoside,14pt,a4paper]{article}
+\usepackage{etoolbox}
+\usepackage{libertine}
+%\usepackage{times}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+\usepackage{combelow}
+
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{soul}
+
+\begin{document}
+\avmoptions{center}
+
+\newcommand{\AVMSfragment}{\begin{Avm}{S}
+	\[\tp{declarative-fragment-ph}\\
+	category \| head & \[\tp{verbal} \\ 
+					 vform & finite\\
+					 ic & +\]\\
+  content & proposition \\
+  
+  context	\| sal-utt & \{\[category & \@{1}\\
+  											content \| index & \@{2}\]\}\]
+  \end{Avm}}
+
+\newcommand{\AVMNPfragment}{\begin{Avm}{NP}
+	\[category & \@{1}\\
+									content \| index & \@{2}\]
+	\end{Avm}}
+	
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}
+
+\begin{bundle}{\AVMSfragment}\setlength{\GapDepth}{50pt}
+               \chunk{\setlength{\GapDepth}{40pt}
+                  \begin{bundle}{\AVMNPfragment}
+                    \chunk{scotch}
+                  \end{bundle}}
+             
+         \end{bundle}
+       	      
+    
+  \end{center}
+\end{figure}
+% \regAvmFonts
+
+
+\end{document}

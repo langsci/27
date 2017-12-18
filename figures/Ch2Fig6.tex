@@ -1,0 +1,42 @@
+\documentclass[preview,border={1pt 0pt 10pt 0pt}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMphrase}{\begin{Avm}{\textit{phrase}}
+											   \end{Avm}}
+\newcommand{\AVMcriterionone}{\begin{Avm}{\fbox{CLAUSALITY}} \end{Avm}}
+\newcommand{\AVMcriteriontwo}{\begin{Avm}{\fbox{HEADEDNESS}} \end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+ \begin{center}
+  	\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{15pt}
+     \noindent\begin{bundle}{\AVMphrase}
+			\chunk{\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{15pt}
+         \begin{bundle}{\AVMcriterionone}
+           \chunk{\textit{clause}}
+           \chunk{\textit{non-clause}}
+               \end{bundle}}
+      \chunk{\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{15pt}
+         \begin{bundle}{\AVMcriteriontwo}
+           \chunk{\begin{Avm}{\textit{headed-ph}}
+												\[synsem / \@{S}\\
+													head-dtr \<\@{1} \[synsem / \@{S}\]\>\\
+													dtrs \<\@{1}\> \, $\oplus$ \textnormal{\textit{list(sign)}}\] \end{Avm}}
+           \chunk{\textit{non-headed-ph}}
+               \end{bundle}}
+\end{bundle}
+ \end{center}
+%\end{figure}
+\end{document}

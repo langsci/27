@@ -1,0 +1,90 @@
+\documentclass[border={70pt 0pt 90pt 0pt},preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSfive}{\begin{Avm}{S}
+		\[\tp{coord-ph}\\ head \@{H$_0$} \textnormal{\textit{verbal}}\\
+		ctxt \| bckgrnd & \{\ldots, \textnormal{\textit{sym-discourse-rel}}(\@{M$_1$}, \@{M$_2$}),\ldots\}\]
+\end{Avm}}
+\newcommand{\AVMSsix}{\begin{Avm}{S}
+		\[head&\@{H$_0$}\\
+		cont&\@{M$_1$}\]
+\end{Avm}}
+\newcommand{\AVMVthree}{\begin{Avm}{V}
+		\[head & \@{H$_0$}\\ arg-st & \< \@{1}\textnormal{\textit{pro}}, \@{2}\[\tp{adv-affix}\\
+		head & \@{H$_1$} \| \@{H$_1$} $\leq$ adv \\
+		major & + \\ cont&\@{C$_1$} \], \@{3} \>\]
+\end{Avm}}
+\newcommand{\AVMAdv}{\begin{Avm}{AdvP}
+		\[ss & \@{3}\[head & \@{H$_2$} \| \@{H$_2$} $\leq$ adv \\
+		major & + \\ cont&\@{C$_2$}
+		\]\]
+\end{Avm}}
+\newcommand{\AVMXPten}{\begin{Avm}{XP}
+		\[\tp{head-fragment-ph}\\
+		ctxt & \[source & \@{M$_1$} \\ sal-utt & \{\[ head & \@{H$_2$} adv$\lor$prep\\
+		major & + \\ cont&\@{C$_2$}\], \[ head & \@{H$_1$} adv\\
+		major & + \\ cont&\@{C$_1$}\] \}\] \\
+		head & \[cluster & \<\@{4}\[head \@{H$_2$} \| \@{H$_2$} $\leq$ \textnormal{\textit{prep}}\\ cont \@{C$_2$'} \],
+		\@{5}\[head \@{H$_1$} \| \@{H$_1$}$\leq$ \textnormal{\textit{adv}} \\ cont \@{C$_1$'} \]\>\] \\
+		cont & \@{M$_2$} \textit{R}$_{sem}$\(\@{M$_1$}, <\@{C$_1$}, \@{C$_1$'}>, <\@{C$_2$}, \@{C$_2$'}>\)
+		\]
+\end{Avm}}
+\newcommand{\AVMXPeleven}{\begin{Avm}{XP}
+		\[\tp{cluster-ph}\\ head \| cluster & \<\@{4}, \@{5}\> \]
+\end{Avm}}
+\newcommand{\AVMPP}{\begin{Avm}{PP}
+		\[ss & \@{4}\]
+\end{Avm}}
+\newcommand{\AVMAdvtwo}{\begin{Avm}{AdvP}
+		\[ss & \@{5}\]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{25pt}
+		\begin{bundle}{\AVMSfive}
+			\chunk{\setlength{\GapWidth}{140pt}\setlength{\GapDepth}{80pt}
+				\begin{bundle}{\AVMSsix}
+					\chunk{\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVthree}
+							\chunk{mai merg}
+						\end{bundle}
+					}
+					\chunk{\setlength{\GapDepth}{45pt}\begin{bundle}{\AVMAdv}
+							\chunk{acas\u{a}}
+					\end{bundle}}
+				\end{bundle}
+			}
+			\chunk{\setlength{\GapDepth}{60pt}
+				\begin{bundle}{\AVMXPten}
+					\chunk{\setlength{\GapDepth}{20pt}
+						\begin{bundle}{\AVMXPeleven}
+							\chunk{
+								\begin{bundle}{\AVMPP}
+									\chunk{la socri}
+							\end{bundle}}
+							\chunk{
+								\begin{bundle}{\AVMAdvtwo}
+									\chunk{niciodat\u{a}}
+							\end{bundle}}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+		\end{bundle}
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

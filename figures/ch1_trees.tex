@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{latexsym}
+\usepackage{libertine-type1}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+\usepackage{soul}
+
+\begin{document}
+
+\noindent \textbf{Chapitre 1}
+\bigskip
+
+
+\noindent{\textbf{Figure 1 \hspace{1cm} Classification des phrases}}
+\vspace{1mm}
+
+\noindent
+
+\Tree[3]{&\K{\textit{racine}}\B{dl}\B{dr} && \K{\textit{li\'ee}}\B{dl}\B{dr} & \\
+				\K{\textit{ind\'ependante}} && \K{\textit{coordonn\'ee}} && \K{\textit{subordonn\'ee}} }
+				
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 2 \hspace{1cm} Hi\'erarchie des types de syntagmes}}	
+\vspace{1mm}
+
+\noindent
+			
+\Tree[2.5]{&&&\K{\textit{phrase}}\B{dll}\B{d}\B{drr} &&\\
+& \K{\fbox{HEADEDNESS}}\B{dl}\B{dr} && \K{\fbox{CONTENT-TYPE}}\B{ddl}\B{ddr} && \K{\fbox{AUTONOMY}}\B{dl}\B{dr}\\
+\K{\textit{hd-ph}} && \K{\textit{non-hd-ph}} & & \K{\textit{autonomous}} && \K{\textit{non-autonomous}}\\
+&& \K{\textit{message-denoting}} && \K{\textit{non-message-denoting}} &&}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 4 \hspace{1cm} Arbre simplifi\'e de la phrase elliptique en (113)}}	
+\vspace{1mm}
+
+\noindent
+
+\Tree{ & \K{CP}\B{dl}\B{dr}		\\
+\K{what$_1$}	&			& \K{C'}\B{dl}\B{dr}  \\
+						& \K{C$[$E$]$} & & \K{TP}\TRi \\
+						& & & \K{\st{John can play \textit{t$_1$}}}
+						}
+
+	
+\bigskip
+
+
+
+\noindent{\textbf{Figure 5 \hspace{1cm} Arbre simplifi\'e de la phrase elliptique en (143b)}}	
+\vspace{1mm}
+
+\noindent
+
+\regAvmFonts\avmoptions{center}
+
+\newcommand{\AVMSfragment}{\begin{Avm}{S}
+	\[\tp{declarative-fragment-ph}\\
+	category \| head & \[\tp{verbal} \\ 
+					 vform & finite\\
+					 ic & +\]\\
+  content & proposition \\
+  
+  context	\| sal-utt & \{\[category & \@{1}\\
+  											content \| index & \@{2}\]\}\]
+  \end{Avm}}
+
+\newcommand{\AVMNPfragment}{\begin{Avm}{NP}
+	\[category & \@{1}\\
+									content \| index & \@{2}\]
+	\end{Avm}}
+	
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}
+
+\begin{bundle}{\AVMSfragment}\setlength{\GapDepth}{50pt}
+               \chunk{\setlength{\GapDepth}{40pt}
+                  \begin{bundle}{\AVMNPfragment}
+                    \chunk{scotch}
+                  \end{bundle}}
+             
+         \end{bundle}
+       	      
+    
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\end{document}

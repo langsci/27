@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{head-fragment-ph} $\Rightarrow$
+\begin{avm}[context [source & message @{M} \\ sal-utt & \{[content & @{C$_1$}],..., [content & @{C$_n$}]\}]\\
+category | head [\tp{head}\\ cluster & <[content & @{C$_1$'}],..., [content & @{C$_n$'}]>]\\
+content \textit{R}$_{sem}$(@{M}, <@{C$_1$}, @{C$_1$'}>,..., <@{C$_n$}, @{C$_n$'}>)]
+\end{avm} 
+\end{document}

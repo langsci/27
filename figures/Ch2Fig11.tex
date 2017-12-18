@@ -1,0 +1,76 @@
+\documentclass[preview,border=10pt]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXP}{\begin{Avm}{XP}
+		\[\tp{omnisyndetic-coord-ph}\\ conj & nil \\ head & \@{H$_3$}\]
+\end{Avm}}
+\newcommand{\AVMAPone}{\begin{Avm}{AP}
+		\[\tp{head-comps-ph}\\
+		conj & \@{1}\\
+		head & \@{H$_1$} \| \@{H$_1$} $\leq$ adj\]
+\end{Avm}}
+\newcommand{\AVMConjone}{\begin{Avm}{Conj}
+		\[head & \@{H$_1$} \\ comps & \<\@{2}\> \\ conj & \@{1} fie\] 
+\end{Avm}}
+\newcommand{\AVMAPtwo}{\begin{Avm}{AP}
+		\@{2} \[head & \@{H$_1$} \| \@{H$_1$} $\leq$ adj \]
+\end{Avm}}
+\newcommand{\AVMNPone}{\begin{Avm}{NP}
+		\[\tp{head-comps-ph}\\
+		conj & \@{1}\\ head & \@{H$_2$} \| \@{H$_2$} $\leq$ noun \]
+\end{Avm}}
+\newcommand{\AVMConjtwo}{\begin{Avm}{Conj}
+		\[head & \@{H$_2$} \\ comps & \<\@{3}\> \\ conj & \@{1} fie\] 
+\end{Avm}}
+\newcommand{\AVMNPtwo}{\begin{Avm}{NP}
+		\@{3} \[head & \@{H$_2$} \| \@{H$_2$} $\leq$ noun \]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+		\begin{bundle}{\AVMXP}
+			\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMAPone}
+					\chunk{\begin{bundle}{\AVMConjone}
+							\chunk{fie}
+						\end{bundle}
+					}
+					\chunk{\setlength{\GapDepth}{38pt}\begin{bundle}{\AVMAPtwo}
+							\chunk{naiv}
+					\end{bundle}}
+				\end{bundle}
+			}
+			\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMNPone}
+					\chunk{\begin{bundle}{\AVMConjtwo}
+							\chunk{fie}
+						\end{bundle}
+					}
+					\chunk{\setlength{\GapDepth}{39pt}\begin{bundle}{\AVMNPtwo}
+							\chunk{un imbecil}
+					\end{bundle}}
+				\end{bundle}
+			}     
+			
+		\end{bundle}
+\end{center}	
+	
+	\hspace{1.5cm}	\& unify(\fbox{H$_1$}, \fbox{H$_2$}, \fbox{H$_3$}) = \textit{nominal}
+	
+%\end{figure}
+\regAvmFonts
+\end{document}

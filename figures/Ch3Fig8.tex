@@ -1,0 +1,55 @@
+\documentclass[preview,border={1cm 1pt -3cm 0cm}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPfive}{\begin{Avm}{XP}
+		\[\tp{head-functor-ph}\\ head & \@{1}\\ mrkg & \@{2} marked\]
+\end{Avm}}
+\newcommand{\AVMPPone}{\begin{Avm}{PP}
+		\[cat & \[head & \[select & \@{3}\]\\ mrkg & \@{2}\]\]
+\end{Avm}}
+\newcommand{\AVMXPsix}{\begin{Avm}{XP}
+		\@{3}\[cat & \[head & \@{1}\\ mrkg & unmarked\]\]
+\end{Avm}}
+\newcommand{\AVMXPsixbis}{\begin{Avm}{XP} 
+\end{Avm}}
+\newcommand{\AVMNPfirst}{\begin{Avm}{NP} 
+\end{Avm}}
+
+
+\smallAvmFonts
+%\begin{figure}[hbcd]
+%	\begin{center}
+		\setlength{\GapWidth}{60pt}\setlength{\GapDepth}{30pt}
+		\begin{bundle}{\AVMXPfive}     	  			
+			\chunk[FCT]{\setlength{\GapWidth}{60pt}\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMPPone}
+					\chunk{parmi}
+					\chunk{lesquelles}
+			\end{bundle}}
+			
+			\chunk[HD]{\setlength{\GapWidth}{60pt}\setlength{\GapDepth}{15pt}
+				\begin{bundle}{\AVMXPsix}
+					\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMXPsixbis}
+							\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMNPfirst}
+									\chunk{Marie}
+							\end{bundle}}
+					\end{bundle}}  
+			\end{bundle}}
+			
+		\end{bundle}
+		
+%	\end{center}
+%\end{figure}
+\regAvmFonts\end{document}

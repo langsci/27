@@ -1,0 +1,89 @@
+\documentclass[preview,border={40pt 0pt}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSone}{\begin{Avm}{S}
+\end{Avm}}
+\newcommand{\AVMStwo}{\begin{Avm}{S}
+\end{Avm}}
+\newcommand{\AVMNPfive}{\begin{Avm}{NP}
+		\[head & \@{1} \]
+\end{Avm}}
+
+\newcommand{\AVMV}{\begin{Avm}{V}
+		\[comps \< \[head & \@{2} nominal \] \> \]
+\end{Avm}}
+\newcommand{\AVMAPthree}{\begin{Avm}{AP}
+		\[head & \@{3} \| \@{3} $\leq$ adj \] 
+\end{Avm}}
+
+\newcommand{\AVMXPsix}{\begin{Avm}{XP}
+		\[sal-utt & \{ \[head & \@{1} noun \], \[ head & \@{4} \] \} \]
+\end{Avm}}
+\newcommand{\AVMXPseven}{\begin{Avm}{XP}
+\end{Avm}}
+\newcommand{\AVMNPseven}{\begin{Avm}{NP}
+		\[head & \@{1} \]
+\end{Avm}}
+\newcommand{\AVMNPsix}{\begin{Avm}{NP}
+		\[head & \@{4} \| \@{4} $\leq$ noun \]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+		\begin{bundle}{\AVMSone}
+			\chunk{\setlength{\GapWidth}{80pt}\begin{bundle}{\AVMStwo}
+					\chunk{\setlength{\GapDepth}{14pt}\begin{bundle}{\AVMNPfive}
+							\chunk{Ion}
+						\end{bundle}
+					}
+					
+					\chunk{\setlength{\GapDepth}{11pt}\begin{bundle}{\AVMV}
+							\chunk{este}
+						\end{bundle}
+					}
+					\chunk{\setlength{\GapDepth}{14pt}\begin{bundle}{\AVMAPthree}
+							\chunk{naiv}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+			
+			
+			\chunk{\setlength{\GapDepth}{17pt}
+				\begin{bundle}{\AVMXPsix}
+					\chunk{\setlength{\GapDepth}{15pt}
+						\begin{bundle}{\AVMXPseven}
+							\chunk{
+								\begin{bundle}{\AVMNPseven}
+									\chunk{Gheorghe}
+							\end{bundle}}
+							\chunk{
+								\begin{bundle}{\AVMNPsix}
+									\chunk{un imbecil}
+							\end{bundle}}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+		\end{bundle}
+\end{center}
+	
+	\hspace{1cm}	\& unify(\fbox{2}, \fbox{3}, \fbox{4}) = \textit{nominal}
+	
+%\end{figure}
+\regAvmFonts
+\end{document}

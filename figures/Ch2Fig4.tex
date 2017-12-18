@@ -1,0 +1,57 @@
+\documentclass[preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+%\usepackage{pdflscape}
+
+\begin{document}
+
+%\regAvmFonts
+\avmoptions{center}
+\newcommand{\AVMzero}{\begin{Avm}{}
+		\[\tp{sign}\\
+		phon & list(phonemes)\\
+		synsem & \[\tp{synsem}\\ local & \[\tp{local}\\ category&\[\tp{category}\\ head & head\\
+		valence & \[subj & list(synsem)\\
+		comps & list(synsem)\\
+		spr & list(synsem)\]\]\\
+		content&\[...\]\\
+		context&\[...\]\]\\
+		non-local \| & \textsc{slash} \, set(local)\]\]
+\end{Avm}}
+
+%\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\begin{bundle}{\begin{Avm}{}
+					\[\tp{sign}\\
+					phon & list(phonemes)\\
+					synsem & \[\tp{synsem}\\ local & \[\tp{local}\\ category&\[\tp{category}\\ head & head\\
+					valence & \[subj & list(synsem)\\
+					comps & list(synsem)\\
+					spr & list(synsem)\]\]\\
+					content&\[...\]\\
+					context&\[...\]\]\\
+					non-local \| & \textnormal{\textsc{slash}} \, set(local)\]\]
+			\end{Avm}}\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{15pt}
+			\chunk{\begin{Avm}
+					{\textit{word}} \[arg-st & list(synsem)\]
+			\end{Avm}}
+			\chunk{\begin{Avm}
+					{\textit{phrase}} \[dtrs & list(sign)\]
+			\end{Avm}}    
+			
+		\end{bundle}
+\end{center}
+%\end{figure}
+%\regAvmFonts
+\end{document}	

@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{conj-word} $\Rightarrow$
+\begin{avm}
+[category & [head&@{1}\\
+						marking&@{2}\\
+						valence & [subj&@{3}\\
+											 spr&@{4}\\
+											 comps & <[head&@{1}\\
+											 					marking&@{2}\\
+											 					subj&@{3}\\
+											 					spr&@{4}\\
+											 					comps&@{5}\\
+											 					conj&nil]> & $\oplus$ & @{5}]\\
+						conj&$\neg$nil]]
+						\end{avm}
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPzerozero}{\begin{Avm}{XP}
+		\[\tp{cluster-ph} \\ synsem & \@{2} \[head \@{1} & \[cluster & \<\@{3}, \@{4} \> \] \] \] 
+\end{Avm}} 
+\newcommand{\AVMNPfirstprime}{\begin{Avm}{NP}
+		\[synsem & \@{3} \[case & oblique\] \]
+\end{Avm}}
+\newcommand{\AVMNPsecondprime}{\begin{Avm}{NP}
+		\[synsem & \@{4} \[case & direct\] \] 
+\end{Avm}}       
+
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\begin{bundle}{\AVMXPzerozero}\setlength{\GapWidth}{70pt}\setlength{\GapDepth}{20pt}
+			\chunk[N-HD]{\setlength{\GapWidth}{70pt}\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMNPfirstprime}
+					\chunk{Mariei}
+			\end{bundle}}
+			\chunk[N-HD]{\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMNPsecondprime}
+					\chunk{o banan\u{a}}
+			\end{bundle}}
+			
+			
+		\end{bundle}
+		
+		
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

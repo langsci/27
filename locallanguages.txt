@@ -1,0 +1,44 @@
+languages to index
+oneperline
+
+allemand
+ancien français
+basque
+chinois
+cherokee
+chuvash
+coréen
+dargwa
+espagnol
+gaélique irlandais
+gallois
+grec 
+hausa
+hébreu
+hindi
+hollandais
+irlandais
+italien
+japonais
+langues bantoues
+langues celtiques
+langues germaniques
+langues romanes
+langues slaves
+latin
+malayalam
+maltais
+mandarin
+néerlandais
+persan
+portugais
+portugais européen
+portugais brésilien
+punjabi
+quechua
+russe
+swahili
+thaï
+tojolabal
+turc
+zapotec

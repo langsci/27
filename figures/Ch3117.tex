@@ -1,0 +1,27 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\begin{avm}
+[\tp{head-fragment-ph} \\
+category & [head & [\tp{verbal} \\ vform & finite]] \\
+content & message \\
+context & [sal-utt & \{[category @1 \\ content | index & @2]\}]] $\longrightarrow$ [category & @1 [head & nominal] \\ content & [index @2]]
+\end{avm}
+\end{document}

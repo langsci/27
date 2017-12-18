@@ -1,0 +1,33 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{gapping-ph} $\Rightarrow$ \textit{coord-ph} \& \\
+\begin{avm} 
+[head @{H} \textnormal{\textit{verbal}}\\
+context | background \{..., \textnormal{\textit{sym-discourse-rel}}(@{M$_1$},..., @{M$_j$}, @{M$_{j+1}$},..., @{M$_n$}), ...\}\\
+dtrs <[head @{H} [\tp{verbal}\\
+									  cluster & elist]\\
+content @{M$_1$}],..., [head @{H} [\tp{verbal}\\
+									  cluster & elist]\\
+content @{M$_j$}]> \, $\oplus$ \\
+
+<[head [cluster & <@1,..., @n >]\\ source @{M$_j$}\\ content @{M$_{j+1}$}],..., [head [cluster & <@{1'},..., @{n'} >]\\ source @{M$_j$}\\ content @{M$_{n}$}]>]  
+\end{avm}
+\end{document}

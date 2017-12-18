@@ -1,0 +1,61 @@
+\documentclass[preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSfragment}{\begin{Avm}{S}
+		\[\tp{declarative-fragment-ph}\\
+		head & \[\tp{verbal} \\ 
+		vform & finite\\
+		ic & +\]\\
+		content & \[\tp{proposition}\\
+		sit & s\\
+		soa & \[quants & \< \>\\
+		nucl & \@{2}\[\tp{leave-rel}\\
+		leaver & \@{1}\]\]\]\\
+		background & \@{$\Sigma$$_3$}\{\textnormal{\textit{named}}\(\@{1},\textnormal{John}\)\}\\
+		context & \[max-qud & \[\tp{question}\\
+		params & \{\[index & \@{1}\\
+		restr & \{\textnormal{\textit{person}}\(\@{1}\)\}\]\}\\
+		prop & \[\tp{proposition}\\
+		sit & s\\
+		soa & \[quants & \<\>\\
+		nucl & \@{2}\]\]\]\\
+		sal-utt & \{\[category & \@{6}\\
+		content \| index & \@{1}\]\}\]\]
+\end{Avm}}
+
+\newcommand{\AVMNPfragment}{\begin{Avm}{NP}
+		\[synsem \| local & \[category & \@{6}\\
+		content \| index & \@{1}\]\\
+		background & \@{$\Sigma$$_3$} \]
+\end{Avm}}
+
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		
+		\begin{bundle}{\AVMSfragment}\setlength{\GapDepth}{50pt}
+			\chunk[HD-DTR]{\setlength{\GapDepth}{20pt}
+				\begin{bundle}{\AVMNPfragment}
+					\chunk{John}
+			\end{bundle}}
+			
+		\end{bundle}
+		
+		
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

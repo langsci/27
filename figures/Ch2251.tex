@@ -1,0 +1,30 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{coord-phrase} $\Rightarrow$ \textit{non-headed-ph} \&
+\begin{avm}
+[dtrs & <$sign$, $sign$> \, $\oplus$ list($sign$)]
+\end{avm}
+\& \\
+\begin{avm}
+[synsem & [conj & nil]\\
+ dtrs & list([conj & nil]) \, $\oplus$  <[conj @1 & $\neg$nil],..., [conj & @1]   >]
+ \end{avm}
+\end{document}

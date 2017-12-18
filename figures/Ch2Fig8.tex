@@ -1,0 +1,42 @@
+\documentclass[preview,border={0pt 2pt 0pt 0pt}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMPPfirst}{\begin{Avm}{PP}
+		\[mrkg & pe \\ conj & sau\]
+\end{Avm}}
+\newcommand{\AVMConjfirst}{\begin{Avm}{Conj}
+		\[conj & sau\]
+\end{Avm}}
+\newcommand{\AVMPPsecond}{\begin{Avm}{PP}
+		\[mrkg & pe \\ conj & nil\]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\begin{bundle}{\AVMPPfirst}\setlength{\GapWidth}{35pt}
+			\chunk[HD]{\setlength{\GapDepth}{27pt}
+				\begin{bundle}{\AVMConjfirst}
+					\chunk{sau}
+			\end{bundle}}
+			\chunk[COMPS]{  \begin{bundle}{\AVMPPsecond}
+					\chunk{pe}
+					\chunk{mas\u{a}}
+			\end{bundle}}
+		\end{bundle}
+		
+\end{center}
+%\end{figure}
+\end{document}

@@ -1,0 +1,390 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+
+\usepackage{xyling}
+
+\usepackage{avm}
+\usepackage{avm+}
+
+\usepackage{combelow}
+
+\usepackage{tree-dvips}
+%\usepackage{qtree}
+
+
+\begin{document}
+
+
+\noindent{\textbf{(113) \hspace{1cm} Structure g\'en\'erale MRS}}
+\vspace{3mm}
+
+\noindent
+\begin{avm}
+[\tp{mrs}\\
+\underline{hook} & [\underline{l}ocal-\underline{top} & $\rightarrow$ handle de l'EP ayant la port\'ee la plus large\\
+			  \underline{ind}ex & $\rightarrow$ indice r\'ef\'erentiel \(type individu\(x\) ou \'ev\'enement\(e\)\)]\\
+\underline{rel}ation\underline{s} & $\rightarrow$ une liste d'EP\\
+\underline{h}andle-\underline{cons}traints & $\rightarrow$ un ensemble de contraintes de port\'ee]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(115) \hspace{1cm} Repr\'esentation MRS du fragment en (116a)}}
+\vspace{3mm}
+
+\noindent
+\begin{avm}
+[source & [hook & [ind & @1]\\
+           rels & @{A} <[\textit{venir-rel}\\
+                                     ind @1\\
+                                     arg1 @2],
+                         [\textit{plusieurs-rel}\\
+                                      ind @2],
+                         [\textit{personne-rel}\\
+                                       ind @2]>]\\
+ abstract-cont & [hook & [ind @3]\\
+               rels & @{B} <[\textit{venir-rel}\\
+                            					ind @3]>]\\
+ fragment & [rels & @{C} <[\textit{marie-rel}\\
+                            				ind @4],
+                           [\textit{hier-rel}\\
+                                    event @5]>]\\
+ target & [hook & [ind @5]\\
+           rels & @{D} <[\textit{venir-rel}\\
+                                  ind @5\\
+                                  arg1 @4],
+                         [\textit{marie-rel}\\
+                                  ind @4],
+                         [\textit{hier-rel}\\
+                                  event @5]>]]
+\end{avm}\\
+\ \& \avmbox B est une distillation maximale de \avmbox A et \avmbox D\\ \& \avmbox D est une fusion de \avmbox B et \avmbox C
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(116) \hspace{1cm} Repr\'esentation MRS du fragment (cas g\'en\'eral)}}
+\vspace{3mm}
+
+\noindent
+\begin{avm}
+[cont & [rels & @1]\\
+ c-cont &  [rels & @2]\\
+ fragment & [source &  [rels & @3]\\ 
+             abstract-cont & [rels & @4]]\\ 
+ dtrs & <[cont & [rels & @5]]>]
+\end{avm}\\
+\ \& \avmbox4 est une distillation maximale de \avmbox3 et \avmbox1\\ \& \avmbox1 est une fusion de \avmbox4, \avmbox5 et \avmbox2
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(117) \hspace{1cm} Syntagme de type t\^ete-fragment dans Ginzburg \& Sag (2000)}}
+\vspace{1mm}
+
+\noindent
+\begin{avm}
+[\tp{head-fragment-ph} \\
+category & [head & [\tp{verbal} \\ vform & finite]] \\
+content & message \\
+context & [sal-utt & \{[category @1 \\ content | index & @2]\}]] $\longrightarrow$ [category & @1 [head & nominal] \\ content & [index @2]]
+\end{avm}
+
+		
+\bigskip
+
+
+		
+\noindent{\textbf{(122) \hspace{0.8cm} Syntagme de type t\^ete-fragment (nouvelle version)}
+\vspace{3mm}
+
+\noindent
+\textit{head-fragment-ph} $\Rightarrow$
+\begin{avm}
+[category & [head & [cluster & <[head & @{H$_1$}],..., [head & @{H$_n$}]>]] \\
+content & message\\
+dtrs & <[\tp{cluster-ph}\\ head & [cluster & <[head & @{H$_1$}],..., [head & @{H$_n$}]>]]>]
+\end{avm} 
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(123) \hspace{1cm} Syntagme de type \textit{cluster}}
+\vspace{3mm}
+
+\noindent
+\textit{cluster-ph} $\Rightarrow$ \textit{non-headed-ph} \& \\
+\begin{avm}
+[head & [\tp{head}\\
+				 cluster & nelist\(synsem\) <@{1}, ..., @{n}>]\\
+ n-hd-dtrs & <[synsem @{1}], ..., [synsem @{n}]>]
+ 
+\end{avm}\\
+%\& n $\geq$ 1 
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(132) \hspace{1cm} Syntagme de type t\^ete-foncteur}}
+\vspace{2mm}
+
+\noindent
+\textit{head-functor-ph} $\Rightarrow$ \textit{headed-ph} \& \\
+\begin{avm}
+[synsem & [cat & [head & @1\\
+              mrkg & @2]]\\
+ dtrs & <[synsem & [cat & [head & [select & @3]\\
+                        	 mrkg & @2]]], @4>\\
+ hd-dtr & @4 [synsem & @3 [cat & [head & @1]]]]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(136) \hspace{1cm} Contrainte de localit\'e 1}}
+\vspace{2mm}
+
+\noindent 
+\begin{avm}
+[\tp{word}\\
+ deps & <..., [cont [hook & @1 anchor]], ...>]
+\end{avm}
+$\Rightarrow$
+\begin{avm}
+[ss [cont [anchors & <..., @1, ...>]]]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(137) \hspace{1cm} Contrainte de localit\'e 2}}
+\vspace{2mm}
+
+\noindent 
+\begin{avm}
+[\tp{cluster}\\
+ dtrs & <..., [cont [hook & @1 anchor]], ...>]
+\end{avm}
+$\Rightarrow$
+\begin{avm}
+[ss [cont [anchors & <..., @1, ...>]]]
+\end{avm}
+
+
+\newpage
+
+
+
+\noindent{\textbf{(139) \hspace{1cm} La construction RSV}}
+\vspace{2mm}
+
+\noindent
+\textsc{vra}-\textit{ph} $\Rightarrow$ \textit{headed-ph} \& \\
+\begin{avm} 
+[cat & [head & @{1} [select & [cont &    [anchors &  <..., [ind & @{10}], ...> \\ rels & @{A} ]]]\\
+									  val & @{2}\\
+									  mrkg & @{9}]\\
+						 cont & [hook & [ind & @{7}] \\ rels & <@{11}, @{12}> & $\oplus$ @{D}]\\
+						 c-cont & [rels & <@{12}[\tp{sum-subpart-rel}\\
+							 										subpart & @{7} event\\
+							 										sum & @{6} event]>]\\
+hd-dtr & @{4}[\tp{cluster-ph}\\ ss & @{3} [cat & [head & @{1}\\
+																	val & @{2}\\
+																	mrkg & unmarked]\\
+													 cont & [hook & [ind & @{7}]\\
+																				anchors & <..., [ind & @{8}], ...> \\ rels & @{C}]\\
+													 fragment & [source [hook & [ind & @{6}] \\ rels & @{A}]\\
+													  						abstract-cont  @{B}]\\
+									 ]\\
+									 ]\\
+dtrs & <[cat & [head & [select & @3] \\ mrkg & @{9}]\\
+	      cont & [hook & [ltop & @{5}]\\
+								rels & < @{11}[\tp{sum-subpart-rel}\\
+												label & @{5}\\
+												subpart & @{8}\\
+							 					sum & @{10}]>]], @{4}>]
+													
+\end{avm}	
+
+
+\bigskip
+
+
+   
+\noindent{\textbf{(140) \hspace{1cm} La construction RSV avec un introducteur contenant une forme \textit{qu-}}
+\vspace{2mm}
+
+\noindent
+\textsc{wh}-\textsc{vra}-\textit{ph} $\Rightarrow$ \textsc{vra}-\textit{ph} \& \\
+\begin{avm}
+[ss [cat [head [select [cont & [anchors & <..., [\textsc{ind} @1], ...>]]]]]\\
+ dtrs <[rel \{@1\}], \textit{sign}>] 
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(143) \hspace{1cm} Entr\'ee lexicale pour la pr\'eposition \textit{dintre} en roumain}}
+\vspace{2mm}
+
+\noindent
+\textsc{dintre}-\textit{word} $\Rightarrow$ \textit{word} \& \\
+\begin{avm}
+[cat & [head & [\tp{preposition}\\
+								xarg & @{1}\\
+								select & [cat & [head & [\tp{noun}\\
+																 case & direct]]\\
+										cont & [anchors & <..., [ind & @{3}], ...>]]]\\
+				mrkg & dintre \\
+				val & [comps & <@{2}>]\\
+				arg-st & <@{1}[cat & [head & noun\\
+														  val & [spr & <>]]\\
+											 cont & [hook &[ind & @{3}]]], @{2}[cat & [head & noun\\
+														  																	 val & [spr & <>]]\\
+											 																		cont & [hook &[ind & @{4}]]\\
+																													rel & \{@{4}\}]>]\\
+cont & [hook & [ltop & @{5}]\\
+				rels & <[\tp{partitioning-sum-subpart-rel}\\
+                 label & @{5}\\
+                 subpart & @{3}\\
+                 sum & @{4}]>]]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(144) \hspace{1cm} Entr\'ee lexicale pour la pr\'eposition \textit{printre} en roumain}}
+\vspace{2mm}
+
+\noindent 
+\textsc{printre}-\textit{word} $\Rightarrow$ \textit{word} \& \\
+\begin{avm}
+[cat & [head & [\tp{preposition}\\
+								xarg & @{1}\\
+								select & [cont & [anchors & <..., [ind & @{3}], ...>]]]\\
+				mrkg & printre \\
+				val & [comps & <@{2}>]\\
+				arg-st & <@{1}[cat & [head & noun\\
+														  val & [spr & <>]]\\
+											 cont & [hook &[ind & @{3}]]], @{2}[cat & [head & noun\\
+														  																	 val & [spr & <>]]\\
+											 																		cont & [hook &[ind & @{4}]]\\															rel & \{@{4}\}]>]\\							
+cont & [hook & [ltop & @{5}]\\
+				rels & <[\tp{sum-subpart-rel}\\
+                 label & @{5}\\
+                 subpart & @{3}\\
+                 sum & @{4}]>]]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(145) \hspace{1cm} Entr\'ee lexicale pour la pr\'eposition \textit{parmi} en fran\c{c}ais}}
+\vspace{2mm}
+
+\noindent 
+\textsc{parmi}-\textit{word} $\Rightarrow$ \textit{word} \& \\
+\begin{avm}
+[cat & [head & [\tp{preposition}\\
+								xarg & @{1}\\
+								select & [cat & [head & noun]\\
+								cont & [anchors & <..., [ind & @{3}], ...>]]]\\
+								mrkg & parmi \\
+				val & [comps & <@{2}>]\\
+				arg-st & <@{1}[cat & [head & noun\\
+														  val & [spr & <>]]\\
+											 cont & [hook &[ind & @{3}]]], @{2}[cat & [head & noun\\
+														  																	 val & [spr & <>]]\\
+											 																		cont & [hook &[ind & @{4}]]\\
+									rel & \{@{4}\}]>]\\								
+cont & [hook & [ltop & @{5}]\\
+				rels & <[\tp{sum-subpart-rel}\\
+                 label & @{5}\\
+                 subpart & @{3}\\
+                 sum & @{4}]>]]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(146) \hspace{1cm} La construction RSV avec un introducteur contenant \textit{dont} en fran\c{c}ais}}
+\vspace{2mm}
+
+\noindent 
+\textsc{dont}-\textsc{vra}-\textit{ph} $\Rightarrow$ \textsc{vra}-\textit{ph} \& \\
+\begin{avm}
+[ss [cat [mrkg & dont]]] 
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(147) \hspace{1cm} Entr\'ee lexicale pour \textit{dont} dans les RSV en fran\c{c}ais}}
+\vspace{2mm}
+
+\noindent 
+\textsc{dont}-\textit{word} $\Rightarrow$ \textit{word} \& \\
+\begin{avm}
+[cat & [head & [select & [cat & [head & [select & [cont & [anchors & <..., [ind & @{4}], ...>]]]]\\
+													cont & [anchors & <..., [ind & @{3}], ...>]]]\\
+				val & <>\\
+				mrkg & dont]\\
+cont & [hook & [ltop & @{5}]\\
+				rels & <[\tp{sum-subpart-rel}\\
+                 label & @{5}\\
+                 subpart & @{3}\\
+                 sum & @{4}]>]]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(148) \hspace{1cm} Entr\'ee lexicale pour le compl\'ementeur \textit{dont} dans les relatives verbales ordinaires}}
+\vspace{3mm}
+
+\noindent 
+\begin{avm}
+[head & [\tp{complementizer}\\
+				 vform & @{1}]\\
+mrkg & dont\\
+comps & <S & [vform & @{1}tensed\\
+							subj & <>\\
+							slash & \{@{2}PP[\textit{de}]\}\\
+							mrkg & unmarked]>\\
+bind & \{@{2}\}\\ 
+slash & \{\}]
+\end{avm} 
+
+
+
+
+
+
+\end{document}

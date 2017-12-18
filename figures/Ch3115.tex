@@ -1,0 +1,51 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\begin{avm}
+[source & [hook & [ind & @1]\\
+           rels & @{A} <[\textnormal{\textit{venir-rel}}\\
+                                     ind @1\\
+                                     arg1 @2],
+                         [\textnormal{\textit{plusieurs-rel}}\\
+                                      ind @2],
+                         [\textnormal{\textit{personne-rel}}\\
+                                       ind @2]>]\\
+ abstract-cont & [hook & [ind @3]\\
+               rels & @{B} <[\textnormal{\textit{venir-rel}}\\
+                            					ind @3]>]\\
+ fragment & [rels & @{C} <[\textnormal{\textit{marie-rel}}\\
+                            				ind @4],
+                           [\textnormal{\textit{hier-rel}}\\
+                                    event @5]>]\\
+ target & [hook & [ind @5]\\
+           rels & @{D} <[\textnormal{\textit{venir-rel}}\\
+                                  ind @5\\
+                                  arg1 @4],
+                         [\textnormal{\textit{marie-rel}}\\
+                                  ind @4],
+                         [\textnormal{\textit{hier-rel}}\\
+                                  event @5]>]]
+\end{avm}
+
+\& \avmbox B est une distillation maximale de \avmbox A et \avmbox D
+
+\noindent
+\& \avmbox D est une fusion de \avmbox B et \avmbox C
+\end{document}

@@ -1,0 +1,568 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+%\documentclass[twoside,14pt,a4paper]{article}
+\usepackage{fullpage}
+%\usepackage{times}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\begin{document}
+
+
+\noindent{\textbf{Figure 1 \hspace{1cm} Analyse par reconstruction syntaxique}}
+\vspace{1mm}
+
+\Tree[2]{         & \K{\textsc{s}}\B{dl}\B{dr}       & \\
+              \K{dont} && \K{\textsc{s}}\B{dl}\B{d}     & \\
+               & \K{\textsc{np}}\B{d} & \K{\textsc{vp}}\B{d}\B{dr}\B{drr} & &\\  
+       & \K{Marie} & \K{$<$est$>$} & \K{$<$venue$>$} & \K{hier}}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 2 \hspace{1cm} Analyse en termes de fragment}}
+\vspace{1mm}
+
+\Tree[2]{         & \K{\textsc{xp}}\B{dl}\B{dr} &\\  
+               \K{dont} && \K{\textsc{xp}}\B{d}\\
+       && \K{\textsc{xp}}\B{dl}\B{dr} &\\
+      & \K{Marie} && \K{hier}}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 3 \hspace{1cm} Hi\'erarchie de syntagmes en HPSG, incluant le fragment et le cluster}}
+\noindent
+
+\Tree[2] {&& \K[6.2]{\textit{phrase}}\Bkk{6.2,0}{0,0}{dl}\Bkk{6.2,0}{0,0}{drr}		\\
+&\K{\textit{non-hd-ph}}\B{dl}\B{dr} &&& \K{\textit{hd-ph}}\B{dl}\B{dr}\B{drrr} \\ 
+\K{\textbf{\textit{cluster-ph}}} & &  \K{\textit{coord-ph}} & \K{\textit{hd-only-ph}}\B{d} && \K{\textit{hd-adj-ph}} && \K{\textit{hd-nexus-ph}}\B{dll}\B{dl}\B{d}\B{dr}\\
+& & & \K{\textbf{\textit{hd-fragm-ph}}} && \K{\textit{hd-comps}} & \K{\textit{hd-subj}} & \K{\textit{hd-filler}} & \K{\textit{...}}}
+
+
+%\bigskip
+\newpage
+
+
+
+\noindent{\textbf{Figure 4 \hspace{1cm} Repr\'esentation simplifi\'ee d'un fragment contenant un cluster de deux constituants}}
+
+\regAvmFonts\avmoptions{center}
+
+\newcommand{\AVMXPone}{\begin{Avm}{XP}
+        \[\tp{head-fragment-ph}\\ synsem & \@{2} \[head \@{1}\]\\ mrkg & nil \]
+        \end{Avm} }
+\newcommand{\AVMXPtwo}{\begin{Avm}{XP}
+				\[\tp{cluster-ph} \\ synsem & \@{2} \[head \@{1} & \[cluster & \<\@{3}, \@{4} \> \] \] \] 
+				\end{Avm}} 
+\newcommand{\AVMNPone}{\begin{Avm}{NP}
+    \[synsem & \@{3} \]
+\end{Avm}}
+\newcommand{\AVMNPtwo}{\begin{Avm}{NP}
+    \[synsem & \@{4} \] 
+    \end{Avm}}       
+    
+
+\smallAvmFonts
+\begin{figure}[hbcd]
+  \begin{center}
+     \begin{bundle}{\AVMXPone}\setlength{\GapDepth}{40pt}
+       \chunk[\textsc{hd}]{\setlength{\GapWidth}{45pt}
+       		\begin{bundle}{\AVMXPtwo}
+               \chunk[\textsc{n-hd}]{\setlength{\GapWidth}{70pt}\setlength{\GapDepth}{20pt}
+                  \begin{bundle}{\AVMNPone}
+                    \chunk{Marie}
+                  \end{bundle}}
+               \chunk[\textsc{n-hd}]{\setlength{\GapDepth}{20pt}
+                  \begin{bundle}{\AVMNPtwo}
+                    \chunk{hier}
+                  \end{bundle}}
+             \end{bundle}}
+             
+         \end{bundle}
+       	      
+    
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 5 \hspace{1cm} Repr\'esentation simplifi\'ee d'un fragment contenant un cluster unaire}}
+
+\regAvmFonts\avmoptions{center}
+
+\newcommand{\AVMXPthree}{\begin{Avm}{XP}
+        \[\tp{head-fragment-ph}\\ synsem & \@{2} \[head \@{1}\]\\ mrkg & nil \]
+        \end{Avm} }
+\newcommand{\AVMXPfour}{\begin{Avm}{XP}
+				\[\tp{cluster-ph} \\ synsem & \@{2} \[head \@{1} & \[cluster & \<\@{3}NP \> \] \] \] 
+				\end{Avm}} 
+\newcommand{\AVMNPthree}{\begin{Avm}{NP}
+    \[synsem & \@{3} \]
+\end{Avm}}
+          
+
+\smallAvmFonts
+\begin{figure}[hbcd]
+  \begin{center}
+     \begin{bundle}{\AVMXPthree}\setlength{\GapDepth}{40pt}
+       \chunk[\textsc{hd}]{\setlength{\GapWidth}{45pt}
+       		\begin{bundle}{\AVMXPfour}
+               \chunk[\textsc{n-hd}]{\setlength{\GapWidth}{70pt}\setlength{\GapDepth}{20pt}
+                  \begin{bundle}{\AVMNPthree}
+                    \chunk{Marie}
+                  \end{bundle}}
+               
+             \end{bundle}}
+             
+         \end{bundle}
+       	      
+    
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 6 \hspace{1cm} Relations fonctionnelles possibles dans la RSV}
+\vspace{1mm}
+
+\noindent
+\Tree{ &&& \K{\textsc{xp}}\B{dll}_{?}\B{drr}^{HD}  &&&\\
+          & \K{\textsc{pp}}\B{dl}\B{dr} & && & \K{\textsc{xp}}\B{d} &\\                         
+\K{dintre} && \K{care} &&& \K{\textsc{xp}}\B{dl}\B{dr}\\
+&&&&      \K{una} && \K{ieri}}
+
+\paragraph{}
+
+\Tree{&&& \K{\textsc{pp}}\B{dll}_{HD}\B{drr}^{?} &&&\\
+          & \K{\textsc{pp}}\B{dl}\B{dr} & && & \K{\textsc{xp}}\B{d} &\\                         
+\K{dintre} && \K{care} &&& \K{\textsc{xp}}\B{dl}\B{dr}\\
+&&&&      \K{una} && \K{ieri}}
+
+\paragraph{}
+
+\Tree{&&& \K{\textsc{xp}}\B{dll}_{N-HD}\B{drr}^{N-HD} &&&\\
+       & \K{\textsc{pp}}\B{dl}\B{dr} & && & \K{\textsc{xp}}\B{d} &\\                         
+\K{dintre} && \K{care} &&& \K{\textsc{xp}}\B{dl}\B{dr}\\
+&&&&      \K{una} && \K{ieri}}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 7 \hspace{1cm} Le syntagme de type t\^ete-foncteur dans une hi\'erarchie de syntagmes}
+
+\noindent
+\Tree[2]{ & \K[5.2]{\textit{phrase}}\Bkk{5.2,0}{0,0}{dl}\Bkk{5.2,0}{0,0}{dr}		\\
+\K{\textit{non-hd-ph}}	&			 & \K[5.2]{\textit{hd-ph}}\Bkk{5.2,0}{0,0}{dl}\Bkk{5.2,0}{0,0}{dr}\Bkk{5.2,0}{0,0}{drrrr}  \\
+& \K{\textit{hd-only-ph}}\B{d} & &   \K{\textit{hd-adj-ph}}\B{d}\B{dr} &&& \K{\textit{hd-nexus-ph}}\B{dl}\B{dr}\B{drr}\\
+& \K{\textit{hd-fragm-ph}} && \K{\textbf{\textit{hd-funct-ph}}} & \K{\textit{...}} & \K{\textit{hd-comps-ph}} && \K{\textit{hd-subj-ph}} & \K{\textit{...}}}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 8 \hspace{1cm} Arbre avec un syntagme t\^ete-foncteur}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPfive}{\begin{Avm}{XP}
+        \[\tp{head-functor-ph}\\ head & \@{1}\\ mrkg & \@{2} marked\]
+      									\end{Avm}}
+\newcommand{\AVMPPone}{\begin{Avm}{PP}
+        \[cat & \[head & \[select & \@{3}\]\\ mrkg & \@{2}\]\]
+      									\end{Avm}}
+\newcommand{\AVMXPsix}{\begin{Avm}{XP}
+  \@{3}\[cat & \[head & \@{1}\\ mrkg & unmarked\]\]
+      									\end{Avm}}
+\newcommand{\AVMXPsixbis}{\begin{Avm}{XP} 
+        							 \end{Avm}}
+\newcommand{\AVMNPfirst}{\begin{Avm}{NP} 
+        							 \end{Avm}}
+
+
+\smallAvmFonts
+\begin{figure}[hbcd]
+  \begin{center}\setlength{\GapWidth}{60pt}\setlength{\GapDepth}{30pt}
+     \begin{bundle}{\AVMXPfive}     	  			
+     \chunk[\textsc{fct}]{\setlength{\GapWidth}{60pt}\setlength{\GapDepth}{20pt}
+         \begin{bundle}{\AVMPPone}
+           \chunk{parmi}
+           \chunk{lesquelles}
+         \end{bundle}}
+     
+  		\chunk[\textsc{hd}]{\setlength{\GapWidth}{60pt}\setlength{\GapDepth}{15pt}
+         \begin{bundle}{\AVMXPsix}
+         	\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMXPsixbis}
+         	 \chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMNPfirst}
+           \chunk{Marie}
+           \end{bundle}}
+           \end{bundle}}  
+         \end{bundle}}
+ 
+     \end{bundle}
+         
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 9 \hspace{1cm} Syntaxe simplifi\'ee des constructions \`a RSV en fran\c{c}ais}}
+
+\Tree{ &&& \K{\textsc{s}}\B{dll}_{HD}\B{drrr}^{ADJ}  &&\\
+& \K{\textsc{s}}\B{dl}_{SUBJ}\B{dr}^{HD} & && && \K{\textsc{xp}}\B{dl}_{FCT}\B{drr}^{HD} &\\ 
+\K{\textsc{np}}\TRi && \K{\textsc{v}}\B{d} &&& \K{\textsc{pp}}\B{dl}_{HD}\B{dr}^{COMPS} & && \K{\textsc{xp}}\B{d}^{HD} &\\
+\K{plusieurs}\Below{personnes} && \K{chantent} && \K{\textsc{p}rep}\B{d} && \K{\textsc{np}}\TRi && \K{\textsc{xp}}\B{d}^{N-HD}\\
+&&&& \K{parmi} && \K{lesquelles} && \K{\textsc{np}}\TRi\\
+&&&& && & & \K{Marie}}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 10 \hspace{1cm} Syntaxe simplifi\'ee des constructions \`a RSV en roumain}}
+
+\Tree{ &&& \K{\textsc{s}}\B{dll}_{HD}\B{drrr}^{ADJ}  &&\\
+& \K{\textsc{s}}\B{dl}_{HD}\B{dr}^{SUBJ} & && && \K{\textsc{xp}}\B{dl}_{FCT}\B{drr}^{HD} &\\ 
+\K{\textsc{v}}\B{d} && \K{\textsc{np}}\TRi &&& \K{\textsc{pp}}\B{dl}_{HD}\B{dr}^{COMPS} & && \K{\textsc{xp}}\B{d}^{HD} &\\
+\K{vin} && \K{mai}\Below{multe}\Below{persoane} && \K{\textsc{p}rep}\B{d} && \K{\textsc{np}}\TRi && \K{\textsc{xp}}\B{d}^{N-HD}\\
+&&&& \K{printre} && \K{care} && \K{\textsc{np}}\TRi\\
+&&&& && & & \K{\c{s}i Maria}}
+
+  
+\newpage
+
+
+
+\noindent{\textbf{Figure 11 \hspace{1cm} Relation \`a distance entre l'introducteur et l'\'el\'ement distingu\'e: accessibilit\'e de l'\'el\'ement distingu\'e dans le corps de la RSV}}      									      				
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPseven}{\begin{Avm}{XP}
+        \[\tp{head-functor-ph} \\ ss & \[ head & \@{6} noun \\ mrkg & \@{7} \\ rel & \{\@{4}\} \] \] 
+        									\end{Avm}}
+        									
+\newcommand{\AVMPPtwo}{\begin{Avm}{PP}
+        \[\tp{head-comps-ph} \\ ss & \[ head & \[select & \@{1}  \] \\ mrkg & \@{7}\\ rel & \{\@{4}\} \] \] 
+        							 \end{Avm}}
+        							 
+\newcommand{\AVMPrepone}{\begin{Avm}{Prep}
+  			\[cat & \[head & \[select & \@{1} \[cont & \[anchors & \<\[ind & \@{3}\]\>\]\]\] \\ mrkg & \@{7}\\ val & \[comps & \<\@{2}\>\] \\ arg-st & \<\@{1}, \@{2}\> \] \\
+  			  cont & \[ltop & \@{5} \\ rels & \<\[\tp{sum-subpart-rel} \\ label & \@{5} \\ subpart & \@{3} \\ sum & \@{4} \] \> \] \]
+      									\end{Avm}}
+      									
+\newcommand{\AVMNPfour}{\begin{Avm}{NP}
+   \[ss &\@{2}\[cat & \[head & noun\]\\ cont & \[ind & \@{4}\] \\ rel & \{\@{4}\}\] \]
+        							 \end{Avm}}
+
+\newcommand{\AVMXPeight}{\begin{Avm}{XP}
+   \[\tp{head-fragment-ph} \\ ss &\@{1}\[cat & \[head & \@{6} noun\]\\ cont & \[ind & \@{3}\] \]\] 
+        							 \end{Avm}}
+        							 
+\newcommand{\AVMXPeightbis}{\begin{Avm}{XP} 
+        							 \end{Avm}}
+\newcommand{\AVMNPsecond}{\begin{Avm}{NP} 
+        							 \end{Avm}}        							 
+
+\smallAvmFonts
+\begin{figure}[hbcd]
+  \begin{center}\setlength{\GapWidth}{100pt}\setlength{\GapDepth}{30pt}
+     \begin{bundle}{\AVMXPseven}     	  			
+   		\chunk[\textsc{fct}]{\setlength{\GapWidth}{140pt}\setlength{\GapDepth}{20pt}
+         \begin{bundle}{\AVMPPtwo}
+         	 \chunk[\textsc{hd}]{
+         	 	\begin{bundle}{\AVMPrepone}
+           		\chunk{parmi}
+         		 \end{bundle}}
+         	  \chunk[\textsc{comps}]{
+         	 	 \begin{bundle}{\AVMNPfour}
+           	 	\chunk{lesquelles}
+         		 \end{bundle}}
+         	\end{bundle}}
+       \chunk[\textsc{hd}]{\setlength{\GapDepth}{15pt}
+         	 	 \begin{bundle}{\AVMXPeight}
+           	 	\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMXPeightbis}
+         	 \chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMNPsecond}
+           \chunk{Marie}
+           \end{bundle}}
+           \end{bundle}}
+         		 \end{bundle}}
+      \end{bundle}
+         
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 12 \hspace{1cm} Relation \`a distance entre la RSV et son ant\'ec\'edent: accessibilit\'e de l'ant\'ec\'edent dans la phrase h\^ote}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSone}{\begin{Avm}{S}
+        \[\tp{head-functor-ph}\] 
+       							 \end{Avm}}
+        							 
+\newcommand{\AVMStwo}{\begin{Avm}{S}
+   \[ss & \@{2}\[cont & \[ind & \@{6} \\ rels & \@{9}\] \] \]
+        							 \end{Avm}}
+        							 
+\newcommand{\AVMNPfive}{\begin{Avm}{NP$_i$}
+    	 \[cont & \[ind & \@{4}\] \] 
+        							 \end{Avm}}
+
+\newcommand{\AVMVone}{\begin{Avm}{V} 
+        							 \end{Avm}}
+        							         							 
+\newcommand{\AVMXPnine}{\begin{Avm}{XP}
+        \[ss & \[cat & \[head & \@{1} \[select & \@{2}\[ cont \[ anchors & \<\[ind & \@{4}\]\>\]\]\] \\
+         mrkg & \@{10} \] \\
+         cont & \[ind & \@{7}\]\\
+         c-cont & \[rels & \<\[\tp{sum-subpart-rel}\\ 
+         											subpart & \@{7} event\\
+         											sum & \@{6} event\]\>\] \\
+											rel & \{\@{4}\}\] \]
+        									\end{Avm}}
+        									        							 
+\newcommand{\AVMPPthree}{\begin{Avm}{PP}
+  			 \[ss &\[cat & \[head & \[select & \@{3} \] \\
+         mrkg & \@{10} \]\\
+			cont & \[ltop & \@{5} \\ rels & \<\[\tp{sum-subpart-rel} \\ label & \@{5} \\ subpart & \@{8} \\ sum & \@{4} \] \> \] \\
+			rel & \{\@{4}\}\] \]
+      									\end{Avm}}
+      									
+\newcommand{\AVMXPten}{\begin{Avm}{XP}
+   			\[ss &\@{3}\[cat \[head & \@{1}\] \\ 
+			cont \[ind  \@{7}\\
+   								anchors & \<\[ind & \@{8}\]\>\]\\
+   				fragment \[source \[ind & \@{6} \\ rels & \@{9}\]\\
+   										abstract-cont \@{B}\]\] \]
+        							 \end{Avm}}
+
+\newcommand{\AVMXPtenbis}{\begin{Avm}{XP} 
+        							 \end{Avm}}
+\newcommand{\AVMNPthird}{\begin{Avm}{NP} 
+        							 \end{Avm}}
+
+\smallAvmFonts
+\begin{figure}[hbcd]
+  \begin{center}\setlength{\GapDepth}{25pt}
+     \begin{bundle}{\AVMSone}     	  			
+   		\chunk[\textsc{hd}]{
+         \begin{bundle}{\AVMStwo}
+         	 \chunk[\textsc{subj}]{
+         	 	\begin{bundle}{\AVMNPfive}
+           		\chunk{plusieurs personnes}
+         		 \end{bundle}}
+    
+         	  \chunk[\textsc{hd}]{
+         	 	 \begin{bundle}{\AVMVone}
+           	 	\chunk{chantent}
+         		 \end{bundle}}
+         		 \end{bundle}}
+         	
+     \chunk[\textsc{fct}]{\setlength{\GapWidth}{110pt}\setlength{\GapDepth}{30pt}
+       \begin{bundle}{\AVMXPnine}
+         	\chunk[\textsc{fct}]{\setlength{\GapWidth}{30pt}
+         	 	\begin{bundle}{\AVMPPthree}
+           		\chunk{parmi}
+           		\chunk{lesquelles$_i$}
+         		 \end{bundle}}
+          \chunk[\textsc{hd}]{\setlength{\GapWidth}{20pt}\setlength{\GapDepth}{15pt}
+         	 	\begin{bundle}{\AVMXPten}
+           	 	\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMXPtenbis}
+         	 \chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMNPthird}
+           \chunk{Marie}
+           \end{bundle}}
+           \end{bundle}}
+         		 \end{bundle}}	 
+         	 \end{bundle}}
+         	 	
+        \end{bundle}
+         
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 13 \hspace{1cm} Arbre avec le compl\'ementeur \textit{dont} dans les relatives ordinaires}}
+
+\regAvmFonts\avmoptions{center}
+
+\newcommand{\AVMNPsix}{\begin{Avm}{NP}
+        \[\tp{head-functor-ph}\]
+      \end{Avm}}
+\newcommand{\AVMNPseven}{\begin{avm} \@1NP$_i$
+      \end{avm}}
+\newcommand{\AVMSthree}{\begin{Avm}{S}
+    \[head & \[select & \@{1} \] \\ mrkg & dont \\ slash & \{ \} \] 
+    \end{Avm}}
+\newcommand{\AVMCompr}{\begin{Avm}{Compr}
+    \[head & \[vform & \@{2}\]\\ mrkg & dont \\ comps & \<\@{3}\>\\ bind & \{\@{4}\} \\ slash & \{\} \]
+		\end{Avm}}
+\newcommand{\AVMSfour}{\begin{Avm}{S}
+\@{3}\[vform & \@{2} tensed \\ subj & \< \>\\ slash & \{\@{4}PP$_i$[\textit{de}] \}\\ mrkg & unmarked \]
+\end{Avm}}
+\newcommand{\AVMNPeight}{\begin{Avm}{NP}
+    \end{Avm}}
+\newcommand{\AVMVtwo}{\begin{Avm}{V}
+		\[slash & \{\@{4}\}\]
+    \end{Avm}}
+    
+\smallAvmFonts
+\begin{figure}[hbcd]
+
+\begin{center}\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+     \begin{bundle}{\AVMNPsix}
+     
+\chunk[\textsc{hd}]{\setlength{\GapDepth}{30pt}
+			\begin{bundle}{\AVMNPseven}
+               \chunk{l'histoire}
+               \end{bundle}
+         }
+
+\chunk[\textsc{fct}]{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+         \begin{bundle}{\AVMSthree}
+           \chunk[\textsc{hd}]{
+             \begin{bundle}{\AVMCompr}
+             		\chunk{dont}
+               		\end{bundle}
+        			 }
+             
+               \chunk[\textsc{comps}]{
+                  \begin{bundle}{\AVMSfour}
+                    \chunk[\textsc{subj}]{
+                      \begin{bundle}{\AVMNPeight}
+                      \chunk{Marie}
+               		\end{bundle}
+        			 }
+                  
+               \chunk[\textsc{hd}]{
+                  \begin{bundle}{\AVMVtwo}
+                    \chunk{parle}
+                  \end{bundle}}
+             \end{bundle}
+           }
+         \end{bundle}
+       }
+     
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 14 \hspace{1cm} Arbre avec l'introducteur \textit{dont} dans les RSV}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSfive}{\begin{Avm}{S}
+        \[\tp{head-functor-ph}\] 
+       							 \end{Avm}}
+        							 
+\newcommand{\AVMSsix}{\begin{Avm}{S}
+    \[\tp{head-subject-ph} \\ ss & \@{2}\[cont & \[ind & \@{6}\] \] \]
+        							 \end{Avm}}
+        							 
+\newcommand{\AVMNPnine}{\begin{Avm}{NP}
+    	 \[ss & \[cont & \[ind & \@{4}\] \] \] 
+        							 \end{Avm}}
+
+\newcommand{\AVMVthree}{\begin{Avm}{V} 
+        							 \end{Avm}}
+        							         							 
+\newcommand{\AVMXPeleven}{\begin{Avm}{XP}
+        \[\tp{head-functor-ph} \\ ss & \[cat & \[head \@{1} & \[select & \@{2} \] \\ mrkg & dont \] \] \]
+        									\end{Avm}}
+        									        							 
+\newcommand{\AVMYPone}{\begin{Avm}{?P}
+  			\[ss & \[cat & \[head & \[select & \[cat \[head \| select \@{7} \| cont \[anchors & \<\[ind & \@{4}\]\> \] \] \\ cont \[anchors & \<\[ind & \@{3}\]\> \] \] \] \\ mrkg & dont\] \\
+  			cont & \[ltop & \@{5} \\ rels & \<\[\tp{sum-subpart-rel} \\ label & \@{5} \\ subpart & \@{3} \\ sum & \@{4} \] \> \] \] \]
+      									\end{Avm}}
+      									
+\newcommand{\AVMXPtwelve}{\begin{Avm}{XP}
+   \[\tp{head-fragment-phrase}\\ ss & \@{7}\[cat & \[head & \@{1}\] \\ cont & \[ind & \@{3}\]\] \]
+        							 \end{Avm}}
+
+\newcommand{\AVMXPtwelvebis}{\begin{Avm}{XP} 
+        							 \end{Avm}}
+\newcommand{\AVMNPfourth}{\begin{Avm}{NP} 
+        							 \end{Avm}}
+
+\smallAvmFonts
+\begin{figure}[hbcd]
+  \begin{center}\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{25pt}
+     \begin{bundle}{\AVMSfive}     	  			
+   		\chunk[\textsc{hd}]{\setlength{\GapWidth}{10pt}
+         \begin{bundle}{\AVMSsix}
+         	 \chunk[\textsc{subj}]{\setlength{\GapDepth}{15pt}
+         	 	\begin{bundle}{\AVMNPnine}
+           		\chunk{plusieurs personnes}
+         		 \end{bundle}}
+    
+         	  \chunk[\textsc{hd}]{\setlength{\GapDepth}{19pt}
+         	 	 \begin{bundle}{\AVMVthree}
+           	 	\chunk{chantent}
+         		 \end{bundle}}
+         		 \end{bundle}}
+         	
+     \chunk[\textsc{fct}]{\setlength{\GapWidth}{200pt}\setlength{\GapDepth}{80pt}
+       \begin{bundle}{\AVMXPeleven}
+         	\chunk[\textsc{fct}]{\setlength{\GapWidth}{100pt}\setlength{\GapDepth}{40pt}
+         	 	\begin{bundle}{\AVMYPone}
+           		\chunk{dont}
+         		 \end{bundle}}
+          		\chunk[\textsc{hd}]{\setlength{\GapWidth}{130pt}\setlength{\GapDepth}{15pt}
+         	 	\begin{bundle}{\AVMXPtwelve}
+           	 	\chunk{\setlength{\GapDepth}{15pt}
+           	 	\begin{bundle}{\AVMXPtwelvebis}
+         	 \chunk{\setlength{\GapDepth}{15pt}
+         	 \begin{bundle}{\AVMNPfourth}
+           \chunk{Marie}
+           \end{bundle}}
+           \end{bundle}}
+         		 \end{bundle}}	 
+         	 \end{bundle}}
+         	 	
+        \end{bundle}
+         
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{cluster-ph} $\Rightarrow$ \textit{non-headed-ph} \& \\
+\begin{avm}
+[head & [\tp{head}\\
+				 cluster & nelist\(synsem\) <@{1}, ..., @{n}>]\\
+subj & < >\\
+spr & < > \\
+comps & < >\\
+slash & $\Sigma$$_1$ $\cup$ ... $\cup$ $\Sigma$$_n$\\
+n-hd-dtrs & <[synsem @{1} [slash & $\Sigma$$_1$]], ..., [synsem @{n} [slash & $\Sigma$$_n$]]>]
+ \end{avm}
+\end{document}

@@ -1,0 +1,96 @@
+\documentclass[border={10pt 0pt 240pt 0pt},preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSnine}{\begin{Avm}{S}
+		\[\tp{coord-ph}\\ head \@{H$_0$} \textnormal{\textit{verbal}}\\
+		ctxt \| bckgrnd & \{\ldots, \textnormal{\textit{sym-discourse-rel}}(\@{M$_1$}, \@{M$_2$}),\ldots\}\]
+\end{Avm}}
+\newcommand{\AVMSten}{\begin{Avm}{S}
+		\[head&\@{H$_0$}\\
+		cont&\@{M$_1$}\]
+\end{Avm}}
+\newcommand{\AVMNPtwelve}{\begin{Avm}{NP}
+		\[ss & \@{1}\]
+\end{Avm}}
+\newcommand{\AVMVfive}{\begin{Avm}{V}
+		\[head & \@{H$_0$}\\ arg-st & \< \@{1}NP,	\@{2}\[\tp{pron-affix}\\ head & \@{H$_1$} \| \@{H$_1$} $\leq$ noun \\
+		major & + \\ cont&\@{C$_1$}\], \@{3} \>\]
+\end{Avm}}
+\newcommand{\AVMNPthirteen}{\begin{Avm}{NP}
+		\[ss & \@{3}\[head & \@{H$_2$} \| \@{H$_2$} $\leq$ noun \\
+		major & + \\ cont&\@{C$_2$}
+		\]\]
+\end{Avm}}
+\newcommand{\AVMXPfourteen}{\begin{Avm}{XP}
+		\[\tp{head-fragment-ph}\\
+		ctxt & \[source & \@{M$_1$} \\ sal-utt & \{\[ head & \@{H$_1$} noun\\
+		major & + \\ cont & \@{C$_1$}\], \[ head & \@{H$_2$} noun\\
+		major & + \\ cont & \@{C$_2$} \]\}\]\\
+		head & \[cluster & \<\@{4}\[head \@{H$_1$} \| \@{H$_1$} $\leq$ \textnormal{\textit{noun}}\\ cont \@{C$_1$'} \],
+		\@{5}\[head \@{H$_2$} \| \@{H$_2$} $\leq$ \textnormal{\textit{noun}} \\ cont \@{C$_2$'} \]\> \] \\
+		cont&\@{M$_2$} \textit{R}$_{sem}$\(\@{M$_1$}, <\@{C$_1$}, \@{C$_1$'}>, <\@{C$_2$}, \@{C$_2$'}>\)
+		\]
+\end{Avm}}
+\newcommand{\AVMXPfifteen}{\begin{Avm}{XP}
+		\[\tp{cluster-ph}\\ head \| cluster & \<\@{4}, \@{5}\> \]
+\end{Avm}}
+\newcommand{\AVMNPfourteen}{\begin{Avm}{NP}
+		\[ss & \@{4}\]
+\end{Avm}}
+\newcommand{\AVMNPfifteen}{\begin{Avm}{NP}
+		\[ss & \@{5}\]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{30pt}\setlength{\GapDepth}{40pt}
+		\begin{bundle}{\AVMSnine}
+			\chunk{\setlength{\GapWidth}{150pt}\setlength{\GapDepth}{90pt}
+				\begin{bundle}{\AVMSten}
+					\chunk{\setlength{\GapDepth}{54pt}\begin{bundle}{\AVMNPtwelve}
+							\chunk{Ion}
+						\end{bundle}
+					}
+					\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMVfive}
+							\chunk{mi-e}
+						\end{bundle}
+					}
+					\chunk{\setlength{\GapDepth}{37pt}\begin{bundle}{\AVMNPthirteen}
+							\chunk{prieten}
+					\end{bundle}}
+				\end{bundle}
+			}
+			\chunk{\setlength{\GapWidth}{30pt}\setlength{\GapDepth}{80pt}
+				\begin{bundle}{\AVMXPfourteen}
+					\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{30pt}
+						\begin{bundle}{\AVMXPfifteen}
+							\chunk{\setlength{\GapDepth}{15pt}
+								\begin{bundle}{\AVMNPfourteen}
+									\chunk{\c{t}ie}
+							\end{bundle}}
+							\chunk{\setlength{\GapDepth}{15pt}
+								\begin{bundle}{\AVMNPfifteen}
+									\chunk{du\c{s}man}
+							\end{bundle}}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+		\end{bundle}
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

@@ -1,0 +1,94 @@
+\documentclass[border={60pt 10pt 20pt 0pt},preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMStwelve}{\begin{Avm}{S}
+		\[subj & \<\>\\ comps & \<\>\]
+\end{Avm}}
+\newcommand{\AVMVseven}{\begin{Avm}{V}
+		\[subj & \<\> \\ comps & \<\@{4}\[cluster & \<NP\textsubscript{\normalfont acc}\>  \, $\oplus$ \<(NP\textsubscript{\normalfont dat})\> \]\>\] 
+\end{Avm}}
+\newcommand{\AVMXPtwenty}{\begin{Avm}{XP}
+		\@{4}\[\tp{simplex-coord-ph}\\ head & \[cluster & \<NP\textsubscript{\normalfont acc}\> \, $\oplus$ \<(NP\textsubscript{\normalfont dat})\> \]\\ coord & +\]
+\end{Avm}}
+
+\newcommand{\AVMXPtwentyone}{\begin{Avm}{XP}
+		\[\tp{cluster-ph}\\ head & \[cluster & \<\@{1}NP\textsubscript{\normalfont acc}\> \, $\oplus$ elist\]\]
+\end{Avm}}
+\newcommand{\AVMNPtwenty}{\begin{Avm}{NP}
+		\[synsem & \@{1} \]
+\end{Avm}}
+
+\newcommand{\AVMXPtwentytwo}{\begin{Avm}{XP}
+		\[\tp{head-comps-ph}\\ head & \[cluster & \<\@{2}NP\textsubscript{\normalfont acc}\> \, $\oplus$ \<\@{3}NP\textsubscript{\normalfont dat}\>\] \\ conj & et\]
+\end{Avm}}
+\newcommand{\AVMConjfive}{\begin{Avm}{Conj}
+\end{Avm}}
+\newcommand{\AVMXPtwentythree}{\begin{Avm}{XP}
+		\[\tp{cluster-ph}\\ head & \[cluster & \<\@{2}NP\textsubscript{\normalfont acc}\> \, $\oplus$ \<\@{3}NP\textsubscript{\normalfont dat}\>\]\]
+\end{Avm}}
+\newcommand{\AVMNPtwentyone}{\begin{Avm}{NP}
+		\[synsem & \@{2} \]
+\end{Avm}}
+\newcommand{\AVMNPtwentytwo}{\begin{Avm}{NP}
+		\[synsem & \@{3} \]
+\end{Avm}}
+
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{30pt}\setlength{\GapDepth}{30pt}
+		\begin{bundle}{\AVMStwelve}
+			\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVseven}
+					\chunk{voi scrie}
+				\end{bundle}
+			}                          
+			\chunk{\setlength{\GapWidth}{65pt}\setlength{\GapDepth}{40pt}
+				\begin{bundle}{\AVMXPtwenty}
+					\chunk{
+						\begin{bundle}{\AVMXPtwentyone}
+							\chunk{\setlength{\GapDepth}{25pt}
+								\begin{bundle}{\AVMNPtwenty}
+									\chunk{tema}
+							\end{bundle}}
+							
+					\end{bundle}}
+					
+					\chunk{
+						\begin{bundle}{\AVMXPtwentytwo}
+							\chunk{\setlength{\GapDepth}{16pt}
+								\begin{bundle}{\AVMConjfive}
+									\chunk{\c{s}i}
+							\end{bundle}}
+							\chunk{
+								\begin{bundle}{\AVMXPtwentythree}
+									\chunk{\setlength{\GapDepth}{25pt}
+										\begin{bundle}{\AVMNPtwentyone}
+											\chunk{o scrisoare}
+									\end{bundle}}
+									\chunk{\setlength{\GapDepth}{25pt}
+										\begin{bundle}{\AVMNPtwentytwo}
+											\chunk{mamei}
+									\end{bundle}}
+							\end{bundle}}
+					\end{bundle}}
+					
+			\end{bundle}}
+			
+		\end{bundle}
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

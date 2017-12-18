@@ -1,0 +1,191 @@
+subject terms to index
+oneperline
+
+accord
+Across-The-Board (ATB) Movement
+acte illocutoire
+adjectif relationnel
+adverbe associatif
+affixe/clitique pronominal
+affixe/clitique adverbial
+ajout incident
+analepse (forward ellipsis)
+anaphore
+anaphore descriptive
+anaphore de surface
+anaphore d'instance
+anaphore profonde
+Antecedent Contained Ellipsis
+approche constructionnelle
+approche non structurale
+approche structurale
+Argument Cluster Coordination (ACC)
+Argument Contained Ellipsis
+asymétrie syntaxique
+atélique
+auxiliaire
+Bare Argument Ellipsis (BAE)
+catalepse (backward ellipsis)
+catégorie mixte
+clivée
+cluster
+cohérence discursive
+Combinatory Categorial Grammar (CCG)
+comparatives
+complexe verbal
+concordance négative
+conjoint incident
+Conjunction Reduction
+constituant majeur
+construction inaccusative
+contenu parenthétique
+Contrainte sur les Structures Coordonnées
+contraintes de localité
+contraintes d'îles
+contraintes de parallélisme
+contraste sémantique
+coordination de termes dissemblables
+coordination omnisyndétique (ou corrélative)
+Copy-and-Merge
+coréférence
+dialogue
+deletion under identity
+dépendance à distance
+désaccentuation
+dislocation
+effacement
+effets de connectivité
+e-GIVENness
+élément vide
+ellipse nominale
+ellipse post-auxiliaire
+ellipse post-modale
+ensemble d'alternatives
+emploi exophorique
+entité plurielle
+éventualité
+éventualité plurielle
+expression idiomatique
+expression référentielle
+extraction
+extraction parallèle
+extraposition
+flexion contextuelle
+flexion inhérente
+focus
+focus contrastif
+Focus Establishing Constituents (FEC)
+focus informationnel
+focus prosodique
+force illocutoire
+fragment
+généralisation de Wasow
+Generalized Phrase Structure Grammar (GPSG)
+grammaire catégorielle
+grammaire dérivationnelle
+grammaire générative
+grammaire lexicaliste
+Heavy NP Shift
+high ellipsis
+îles PF
+îles propositionnelles
+implicature conventionnelle
+interprétation exemplifiante
+interprétation intersective
+interprétation non intersective
+interprétation partitionnante
+inversion du sujet
+juxtaposition
+légitimation indirecte
+Left Peripheral Ellipsis
+Lexical Resource Semantics (LRS)
+LF-copy
+linéarisation
+low ellipsis
+marquage casuel
+marquage différentiel de l'objet
+marquage prépositionnel
+massique
+méronymie
+mouvement
+Maximal Question Under Discussion (MAX-QUD)
+Maxime de Quantité
+Minimal Recursion Semantics (MRS)
+négation
+No Embedding Constraint
+Null Complement Anaphora
+Null Objects
+ordre de mots
+object drop
+paire contrastive
+paradigme de flexion
+PF-deletion
+phrase averbale
+pied-piping
+polarité
+portée étroite
+portée large
+possession
+prédicat collectif
+prédicat complexe
+prédicat d'attitude propositionnelle
+preposition stranding
+principe de compositionnalité
+Principe de conservation des arguments
+Principe de la Projection Etendue
+principe de récupérabilité de l’ellipse
+Principe des traits de tête généralisé
+principes du liage
+processing
+pro-drop
+proforme nulle
+pronom résomptif
+prosodie incidente
+prosodie intégrée
+pseudoclivée
+Pseudogapping
+quantifieur existentiel
+quantifieur négatif
+quantifieur universel
+question courte
+question multiple
+Question Under Discussion (QUD)
+rasoir d’Occam
+reconstruction syntaxique
+reconstruction sémantique
+redoublement clitique
+règle lexicale
+relation anaphorique
+relation discursive  
+réponse courte
+restricteur
+Right-Node Raising (RNR)
+Right Roof Constraint
+saillance prosodique
+Salient Utterance (SAL-UTT)
+scrambling
+sideward movement 
+signifiant
+signifié
+Sluicing
+split antecedent
+Sprouting
+Stripping
+structure informationnelle
+structure plate
+subject drop
+substitution
+syntagme endocentrique
+syntagme exocentrique
+télique
+tête faible
+tête prédicative
+topique
+topique contrastif
+type de phrase
+Type Theory with Records (TTR)
+unification d'ordre supérieur
+vehicle change
+Verb Phrase Ellipsis (VPE)
+Verb-Stranding VPE
+zeugme

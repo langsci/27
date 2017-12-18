@@ -1,0 +1,29 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{head-functor-ph} $\Rightarrow$ \textit{headed-ph} \& \\
+\begin{avm}
+[synsem & [cat & [head & @1\\
+              mrkg & @2]]\\
+ dtrs & <[synsem & [cat & [head & [select & @3]\\
+                        	 mrkg & @2]]], @4>\\
+ hd-dtr & @4 [synsem & @3 [cat & [head & @1]]]]
+\end{avm}
+\end{document}

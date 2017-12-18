@@ -1,0 +1,90 @@
+\documentclass[border={70pt 10pt 90pt 0pt},preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSseven}{\begin{Avm}{S}
+		\[\tp{coord-ph}\\ head \@{H$_0$} \textnormal{\textit{verbal}}\\
+		ctxt \| bckgrnd & \{\ldots, \textnormal{\textit{sym-discourse-rel}}(\@{M$_1$}, \@{M$_2$}),\ldots\}\]
+\end{Avm}}
+\newcommand{\AVMSeight}{\begin{Avm}{S}
+		\[head&\@{H$_0$}\\
+		cont&\@{M$_1$}\]
+\end{Avm}}
+\newcommand{\AVMVfour}{\begin{Avm}{V}
+		\[head & \@{H$_0$}\\ arg-st & \< \@{1}\[\textnormal{\textit{pro}}\\
+		head & \@{H$_1$} \| \@{H$_1$} $\leq$ noun \\
+		major & + \\ cont&\@{C$_1$}\], \@{2} \>\]
+\end{Avm}}
+\newcommand{\AVMPPone}{\begin{Avm}{PP}
+		\[ss & \@{2}\[head & \@{H$_2$} \| \@{H$_2$} $\leq$ prep \\
+		major & + \\ cont & \@{C$_2$}
+		\]\]
+\end{Avm}}
+\newcommand{\AVMXPtwelve}{\begin{Avm}{XP}
+		\[\tp{head-fragment-ph}\\
+		ctxt & \[source & \@{M$_1$} \\ sal-utt & \{\[ head & \@{H$_1$} noun\\
+		major & + \\ cont&\@{C$_1$}\], \[ head & \@{H$_2$} prep\\
+		major & + \\ cont&\@{C$_2$}\]\} \]\\
+		head & \[cluster & \<\@{3}\[head \@{H$_1$} \| \@{H$_1$} $\leq$ \textnormal{\textit{noun}}\\ cont \@{C$_1$'} \],
+		\@{4}\[head \@{H$_2$} \| \@{H$_2$}$\leq$ \textnormal{\textit{prep}} \\ cont \@{C$_2$'} \]\> \] \\
+		cont&\@{M$_2$} \textit{R}$_{sem}$\(\@{M$_1$}, <\@{C$_1$}, \@{C$_1$'}>, <\@{C$_2$}, \@{C$_2$'}>\)
+		\]
+\end{Avm}}
+\newcommand{\AVMXPthirteen}{\begin{Avm}{XP}
+		\[\tp{cluster-ph}\\ head \| cluster & \<\@{3}, \@{4}\> \]
+\end{Avm}}
+\newcommand{\AVMNPeleven}{\begin{Avm}{NP}
+		\[ss & \@{3}\]
+\end{Avm}}
+\newcommand{\AVMPPtwo}{\begin{Avm}{PP}
+		\[ss & \@{4}\]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{45pt}\setlength{\GapDepth}{25pt}
+		\begin{bundle}{\AVMSseven}
+			\chunk{\setlength{\GapWidth}{140pt}\setlength{\GapDepth}{80pt}
+				\begin{bundle}{\AVMSeight}
+					\chunk{\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVfour}
+							\chunk{merg}
+						\end{bundle}
+					}
+					\chunk{\setlength{\GapDepth}{42pt}\begin{bundle}{\AVMPPone}
+							\chunk{la film}
+					\end{bundle}}
+				\end{bundle}
+			}
+			\chunk{\setlength{\GapDepth}{55pt}
+				\begin{bundle}{\AVMXPtwelve}
+					\chunk{\setlength{\GapDepth}{20pt}
+						\begin{bundle}{\AVMXPthirteen}
+							\chunk{
+								\begin{bundle}{\AVMNPeleven}
+									\chunk{sora mea}
+							\end{bundle}}
+							\chunk{
+								\begin{bundle}{\AVMPPtwo}
+									\chunk{la muzeu}
+							\end{bundle}}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+		\end{bundle}
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

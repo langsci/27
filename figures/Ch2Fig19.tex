@@ -1,0 +1,90 @@
+\documentclass[border={40pt 0pt},preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSthree}{\begin{Avm}{(*) S}
+\end{Avm}}
+\newcommand{\AVMSfour}{\begin{Avm}{S}
+\end{Avm}}
+\newcommand{\AVMNPeight}{\begin{Avm}{NP}
+		\[head & \@{1} \]
+\end{Avm}} 
+
+\newcommand{\AVMVtwo}{\begin{Avm}{V'}
+		\[comps \< \[head & \@{2} noun \] \> \]
+\end{Avm}}
+\newcommand{\AVMNPnine}{\begin{Avm}{NP}
+		\[head & \@{3} \| \@{3} $\leq$ noun \] 
+\end{Avm}}
+
+\newcommand{\AVMXPeight}{\begin{Avm}{XP}
+		\[sal-utt & \{ \[head & \@{1} noun \], \[ head & \@{4} \] \} \]
+\end{Avm}}
+\newcommand{\AVMXPnine}{\begin{Avm}{XP}
+\end{Avm}}
+\newcommand{\AVMNPten}{\begin{Avm}{NP}
+		\[head & \@{1} \]
+\end{Avm}}
+\newcommand{\AVMAPfour}{\begin{Avm}{AP}
+		\[head & \@{4} \| \@{4} $\leq$ adj \]
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+		\begin{bundle}{\AVMSthree}
+			\chunk{\setlength{\GapWidth}{55pt}\begin{bundle}{\AVMSfour}
+					\chunk{\begin{bundle}{\AVMNPeight}
+							\chunk{Ion}
+						\end{bundle}
+					}
+					
+					\chunk{\setlength{\GapDepth}{16pt}
+						\begin{bundle}{\AVMVtwo}
+							\chunk{a-\^int\^alnit}
+						\end{bundle}
+					}
+					\chunk{\begin{bundle}{\AVMNPnine}
+							\chunk{un imbecil}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+			
+			
+			\chunk{\setlength{\GapDepth}{17pt}
+				\begin{bundle}{\AVMXPeight}
+					\chunk{\setlength{\GapDepth}{15pt}
+						\begin{bundle}{\AVMXPnine}
+							\chunk{\setlength{\GapDepth}{23pt}
+								\begin{bundle}{\AVMNPten}
+									\chunk{Gheorghe}
+							\end{bundle}}
+							\chunk{\setlength{\GapDepth}{23pt}
+								\begin{bundle}{\AVMAPfour}
+									\chunk{naiv}
+							\end{bundle}}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+		\end{bundle}
+\end{center}
+	
+	\hspace{1cm}	\& unify(\fbox{2}, \fbox{3}, \fbox{4}) = $\perp$
+	
+%\end{figure}
+\regAvmFonts
+\end{document}

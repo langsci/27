@@ -1,0 +1,47 @@
+\documentclass[float,border={2cm 1pt 2cm 0cm}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+
+\newcommand{\AVMXPthree}{\begin{Avm}{XP}
+		\[\tp{head-fragment-ph}\\ synsem & \@{2} \[head \@{1}\]\\ mrkg & nil \]
+\end{Avm} }
+\newcommand{\AVMXPfour}{\begin{Avm}{XP}
+		\[\tp{cluster-ph} \\ synsem & \@{2} \[head \@{1} & \[cluster & \<\@{3}NP \> \] \] \] 
+\end{Avm}} 
+\newcommand{\AVMNPthree}{\begin{Avm}{NP}
+		\[synsem & \@{3} \]
+\end{Avm}}
+
+
+\smallAvmFonts
+%\begin{figure}[hbcd]
+%	\begin{center}
+		\begin{bundle}{\AVMXPthree}\setlength{\GapDepth}{40pt}
+			\chunk[HD]{\setlength{\GapWidth}{45pt}
+				\begin{bundle}{\AVMXPfour}
+					\chunk[N-HD]{\setlength{\GapWidth}{70pt}\setlength{\GapDepth}{20pt}
+						\begin{bundle}{\AVMNPthree}
+							\chunk{Marie}
+					\end{bundle}}
+					
+			\end{bundle}}
+			
+		\end{bundle}
+		
+		
+%	\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\begin{avm}
+[cont & [rels & @1]\\
+ c-cont &  [rels & @2]\\
+ fragment & [source &  [rels & @3]\\ 
+             abstract-cont & [rels & @4]]\\ 
+ dtrs & <[cont & [rels & @5]]>]
+\end{avm}\\
+\ \& \avmbox4 est une distillation maximale de \avmbox3 et \avmbox1\\ \& \avmbox1 est une fusion de \avmbox4, \avmbox5 et \avmbox2
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPthree}{\begin{Avm}{XP}
+		\[\tp{head-comps-ph}\\ head & \@{1} \\ conj & \@{C}\]
+\end{Avm}}
+\newcommand{\AVMConjthree}{\begin{Avm}{Conj}
+		\[comps & \< \@{2} \[head&\@{1} $\neg$finite-v \]\>\\
+		conj & \@{C} ainsi-que\]
+\end{Avm}}
+\newcommand{\AVMXPfour}{\begin{Avm}{XP}
+		\[\tp{head-fragment-ph} \\ synsem & \@{2} \[head \@{1} \] \\
+		conj & nil \] 
+\end{Avm}}
+\newcommand{\AVMXPfive}{\begin{Avm}{XP}
+		\[\tp{cluster-ph} \\ synsem & \@{2} \[head & \@{1} \[cluster \< \@{3}, \@{4} \> \] \] \]
+\end{Avm}}
+\newcommand{\AVMNPthree}{\begin{Avm}{NP}
+		\[synsem & \@{3} \]
+\end{Avm}}
+\newcommand{\AVMNPfour}{\begin{Avm}{NP}
+		\[synsem & \@{4} \] 
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}
+	
+\begin{center}
+		\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+		\begin{bundle}{\AVMXPthree}
+			
+			\chunk{\setlength{\GapDepth}{30pt}
+				\begin{bundle}{\AVMConjthree}
+					\chunk{ainsi-que}
+				\end{bundle}
+			}
+			
+			\chunk{\setlength{\GapDepth}{25pt}
+				\begin{bundle}{\AVMXPfour}
+					\chunk{\setlength{\GapDepth}{15pt}
+						\begin{bundle}{\AVMXPfive}
+							\chunk{\setlength{\GapWidth}{50pt}
+								\begin{bundle}{\AVMNPthree}
+									\chunk{Marie}
+							\end{bundle}}
+							\chunk{
+								\begin{bundle}{\AVMNPfour}
+									\chunk{des fraises}
+							\end{bundle}}
+						\end{bundle}
+					}
+				\end{bundle}
+			}
+			
+			
+		\end{bundle}
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

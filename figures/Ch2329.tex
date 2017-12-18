@@ -1,0 +1,29 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{a scrie}$_1$: 
+\begin{avm}
+[comps <NP$_{acc}$> &  $\oplus$ <(NP$_{dat}$)> ]
+\end{avm}\\
+\textit{a scrie}$_2$: 
+\begin{avm}
+[comps <[coord +\\ cluster <NP$_{acc}$> &  $\oplus$ <(NP$_{dat}$)>]>]
+\end{avm}
+\end{document}

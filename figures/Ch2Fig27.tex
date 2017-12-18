@@ -1,0 +1,100 @@
+\documentclass[border={60pt 10pt 15pt 0pt},preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSeleven}{\begin{Avm}{S}
+		\[subj & \<\>\\ comps & \<\>\]
+\end{Avm}}
+\newcommand{\AVMVsix}{\begin{Avm}{V}
+		\[subj & \<\> \\ comps & \<\@{4}\[cluster & \<NP\textsubscript{\normalfont acc}\>  \, $\oplus$ \<NP\textsubscript{\normalfont dat}\>\]\>\]
+\end{Avm}}
+\newcommand{\AVMXPsixteen}{\begin{Avm}{XP}
+		\@{4}\[\tp{simplex-coord-ph}\\ head & \[cluster & \<NP\textsubscript{\normalfont acc}\> \, $\oplus$ \<NP\textsubscript{\normalfont dat}\>\]\\ coord & +\]
+\end{Avm}}
+
+\newcommand{\AVMXPseventeen}{\begin{Avm}{XP}
+		\[\tp{cluster-ph}\\ head & \[cluster & \<\@{1}NP\textsubscript{\normalfont acc}\> \, $\oplus$ \<\@{2}NP\textsubscript{\normalfont dat}\>\]\]
+\end{Avm}}
+\newcommand{\AVMNPsixteen}{\begin{Avm}{NP}
+		\[synsem & \@{1} \]
+\end{Avm}}
+\newcommand{\AVMNPseventeen}{\begin{Avm}{NP}
+		\[synsem & \@{2} \]
+\end{Avm}}
+
+\newcommand{\AVMXPeighteen}{\begin{Avm}{XP}
+		\[\tp{head-comps-ph}\\ head & \[cluster & \<\@{3}NP\textsubscript{\normalfont acc}\> \, $\oplus$ \<\@{4}NP\textsubscript{\normalfont dat}\>\] \\ conj & et\]
+\end{Avm}}
+\newcommand{\AVMConjfour}{\begin{Avm}{Conj}
+\end{Avm}}
+\newcommand{\AVMXPnineteen}{\begin{Avm}{XP}
+		\[\tp{cluster-ph}\\ head & \[cluster & \<\@{3}NP\textsubscript{\normalfont acc}\> \, $\oplus$ \<\@{4}NP\textsubscript{\normalfont dat}\>\]\]
+\end{Avm}}
+\newcommand{\AVMNPeighteen}{\begin{Avm}{NP}
+		\[synsem & \@{3} \]
+\end{Avm}}
+\newcommand{\AVMNPnineteen}{\begin{Avm}{NP}
+		\[synsem & \@{4} \]
+\end{Avm}}
+
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\setlength{\GapWidth}{0pt}\setlength{\GapDepth}{30pt}
+		\begin{bundle}{\AVMSeleven}
+			\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVsix}
+					\chunk{\^ii dau}
+				\end{bundle}
+			}                          
+			\chunk{\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{40pt}
+				\begin{bundle}{\AVMXPsixteen}
+					\chunk{
+						\begin{bundle}{\AVMXPseventeen}
+							\chunk{\setlength{\GapDepth}{25pt}
+								\begin{bundle}{\AVMNPsixteen}
+									\chunk{o carte}
+							\end{bundle}}
+							\chunk{\setlength{\GapDepth}{25pt}
+								\begin{bundle}{\AVMNPseventeen}
+									\chunk{Mariei}
+							\end{bundle}}
+					\end{bundle}}
+					
+					\chunk{
+						\begin{bundle}{\AVMXPeighteen}
+							\chunk{\setlength{\GapDepth}{16pt}
+								\begin{bundle}{\AVMConjfour}
+									\chunk{\c{s}i}
+							\end{bundle}}
+							\chunk{
+								\begin{bundle}{\AVMXPnineteen}
+									\chunk{\setlength{\GapDepth}{25pt}
+										\begin{bundle}{\AVMNPeighteen}
+											\chunk{un stilou}
+									\end{bundle}}
+									\chunk{\setlength{\GapDepth}{25pt}
+										\begin{bundle}{\AVMNPnineteen}
+											\chunk{Ioanei}
+									\end{bundle}}
+							\end{bundle}}
+					\end{bundle}}
+					
+			\end{bundle}}
+			
+		\end{bundle}
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

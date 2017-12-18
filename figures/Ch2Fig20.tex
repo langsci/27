@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+%\usepackage{pdflscape}
+
+\begin{document}
+	\noindent\Tree[2] {&& \K[6.2]{\textit{phrase}}\Bkk{6.2,0}{0,0}{dl}\Bkk{6.2,0}{0,0}{drr}		\\
+		&\K{\textit{hd-ph}} &&& \K{\textit{non-hd-ph}}\B{dl}\B{dr} \\
+		&& & \K{\textit{coord-ph}}\B{dll}\B{drr} && \K{...}\\ 
+		& \K{\fbox{MARKING}}\B{dl}\B{dr} && && \K{\fbox{CANONICITY}}\B{dl}\B{dr}\\
+		\K{\textit{simplex-coord-ph}} && \K{\textit{omnisyndetic-coord-ph}} && \K{\textit{canon-coord-ph}} && \K{\textit{non-canon-coord-ph}}\B{d}\\
+		&& && &&  \K{\textbf{\textit{gapping-ph}}}}
+\end{document}	

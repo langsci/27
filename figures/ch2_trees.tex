@@ -1,0 +1,1218 @@
+%\documentclass[twoside,14pt,a4paper]{article}
+%\usepackage{fullpage}
+%\usepackage{times}
+%\usepackage{latexsym}
+%\usepackage{ecltree+}
+%\usepackage{avm}
+%\usepackage{avm+}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+
+
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+%\documentclass[twoside,14pt,a4paper]{article}
+\usepackage{libertine-type1}
+%\usepackage{times}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\usepackage{pdflscape}
+
+
+
+\begin{document}
+
+\noindent{\textbf{Figure 3 \hspace{1cm} La syntaxe d'une construction \`a gapping dans Culicover \& Jackendoff (2005)}
+\vspace{3mm}
+\noindent
+
+\Tree[1]{&&&&\K{S}\B{dll}\B{d}\B{drrr}\\
+&&\K{S$^{ANTECEDENT}$}\B{dl}\B{dr} && \K{and} &&& \K{?$^{IL}$}\B{dl}\B{dr}\\
+&\K{NP$^{TARGET1}$}\B{d} &&\K{VP}\B{dl}\B{dr} &&& \K{NP$^{ORPHAN1}$}\B{d} && \K{NP$^{ORPHAN2}$}\B{d}\\
+&\K{Robin} & \K{V}\B{d} &&\K{NP$^{TARGET2}$}\B{d} && \K{Leslie} && \K{German}\\
+&& \K{speaks} && \K{French} & &&
+}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 4 \hspace{1cm} Hi\'erarchie simplifi\'ee des signes}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMzero}{\begin{Avm}{}
+        \[\tp{sign}\\
+phon & list(phonemes)\\
+synsem & \[\tp{synsem}\\ local & \[\tp{local}\\ category&\[\tp{category}\\ head & head\\
+													valence & \[subj & list(synsem)\\
+													comps & list(synsem)\\
+													spr & list(synsem)\]\]\\
+									content&\[...\]\\
+									context&\[...\]\]\\
+					non-local \| & \textsc{slash} \, set(local)\]\]
+      \end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+
+\begin{center}
+     \begin{bundle}{\AVMzero}\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{15pt}
+     			\chunk{\begin{Avm}
+     						{\textit{word}} \[arg-st & list(synsem)\]
+     						\end{Avm}}
+     			\chunk{\begin{Avm}
+     						{\textit{phrase}} \[dtrs & list(sign)\]
+     						\end{Avm}}    
+  
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 5 \hspace{1cm} Hi\'erarchie des valeurs \textit{synsem}}}
+
+\Tree[2]{ & \K[5.2]{\textit{synsem}}\Bkk{5.2,0}{0,0}{dl}\Bkk{5.2,0}{0,0}{dr}		\\
+\K{\textit{canonical}}	&			 & \K[5.2]{\textit{non-canonical}}\Bkk{5.2,0}{0,0}{dl}\Bkk{5.2,0}{0,0}{drr}  \\
+	& \K{\textit{affix}}\B{dl}\B{dr} & & &  \K{\textit{null}}\B{dl}\B{dr} \\
+			 \K{\textit{pron}} && \K{\textit{adv}} & \K{\textit{pro}} && \K{\textit{gap}}}
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 6 \hspace{1cm} Classification des syntagmes}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMphrase}{\begin{Avm}{\textit{phrase}}
+											   \end{Avm}}
+\newcommand{\AVMcriterionone}{\begin{Avm}{\fbox{CLAUSALITY}} \end{Avm}}
+\newcommand{\AVMcriteriontwo}{\begin{Avm}{\fbox{HEADEDNESS}} \end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{15pt}
+     \begin{bundle}{\AVMphrase}
+			\chunk{\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{15pt}
+         \begin{bundle}{\AVMcriterionone}
+           \chunk{\textit{clause}}
+           \chunk{\textit{non-clause}}
+               \end{bundle}}
+      \chunk{\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{15pt}
+         \begin{bundle}{\AVMcriteriontwo}
+           \chunk{\begin{Avm}{\textit{headed-ph}}
+												\[synsem / \@{S}\\
+													head-dtr \<\@{1} \[synsem / \@{S}\]\>\\
+													dtrs \<\@{1}\> \, $\oplus$ \textit{list(sign)}\] \end{Avm}}
+           \chunk{\textit{non-headed-ph}}
+               \end{bundle}}
+\end{bundle}
+  \end{center}
+\end{figure}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 7 \hspace{1cm} Structure hi\'erarchique de la coordination}
+\vspace{3mm}
+
+\Tree[0.5]{&\K{ZP}\B{dl}\B{dr}\\
+\K{NP}\B{d} && \K{XP}\B{dl}\B{dr}\\
+\K{Ion} & \K{Conj}\B{d} && \K{NP}\B{d}\\
+& \K{\c{s}i} && \K{Maria}}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 8 \hspace{1cm} Syntaxe simplifi\'ee du syntagme conjoint}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMPPfirst}{\begin{Avm}{PP}
+	\[mrkg & pe \\ conj & sau\]
+	\end{Avm}}
+\newcommand{\AVMConjfirst}{\begin{Avm}{Conj}
+	\[conj & sau\]
+	\end{Avm}}
+\newcommand{\AVMPPsecond}{\begin{Avm}{PP}
+	\[mrkg & pe \\ conj & nil\]
+	\end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+
+\begin{center}
+\begin{bundle}{\AVMPPfirst}\setlength{\GapWidth}{35pt}
+			\chunk{\textsc{hd}}{\setlength{\GapDepth}{35pt}
+						\begin{bundle}{\AVMConjfirst}
+			\chunk{sau}
+			\end{bundle}}
+			\chunk{\textsc{comps}}{\begin{bundle}{\AVMPPsecond}
+						\chunk{pe}
+						\chunk{mas\u{a}}
+						\end{bundle}}
+			\end{bundle}
+
+  \end{center}
+\end{figure}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 9 \hspace{1cm} Syntaxe simplifi\'ee d'une coordination de phrases}}
+\vspace{1mm}
+
+\Tree{ && \K[5.2]{S[coord]}\Bkk{5.2,0}{0,0}{dl}_{N-HD}		
+										 \Bkk{5.2,0}{0,0}{drr}^{N-HD} \\
+&\K{S}\TRi		&&			 & \K{S}\B{dl}_{HD}\B{dr}^{COMPS}  \\
+&\K{Ion doarme}	&& 
+						\K{Conj}\B{d} && \K{S}\TRi[2] \\
+				&&& \K{\c{s}i} && \K{Maria cite\c{s}te} }
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 10 \hspace{1cm} La structure coordonn\'ee dans une hi\'erarchie de syntagmes}}
+
+\Tree[2] {&& \K[6.2]{\textit{phrase}}\Bkk{6.2,0}{0,0}{dl}\Bkk{6.2,0}{0,0}{drr}		\\
+&\K{\textit{headed-ph}} &&& \K{\textit{non-headed-ph}}\B{dl}\B{dr} \\
+&& & \K{\textit{coord-ph}}\B{dl}\B{dr}\B{drrrr} && \K{...}\\  
+&& \K{\textit{simplex-coord-ph}} && \K{\textit{omnisyndetic-coord-ph}} &&& \K{\textit{asyndetic-coord-ph}} &&}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 11 \hspace{1cm} Coordination de termes dissemblables}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXP}{\begin{Avm}{XP}
+        \[\tp{omnisyndetic-coord-ph}\\ conj & nil \\ head & \@{H$_3$}\]
+      \end{Avm}}
+\newcommand{\AVMAPone}{\begin{Avm}{AP}
+        \[\tp{head-comps-ph}\\
+        conj & \@{1}\\
+        head & \@{H$_1$} \| \@{H$_1$} $\leq$ adj\]
+      \end{Avm}}
+\newcommand{\AVMConjone}{\begin{Avm}{Conj}
+    \[head & \@{H$_1$} \\ comps & \<\@{2}\> \\ conj & \@{1} fie\] 
+    \end{Avm}}
+\newcommand{\AVMAPtwo}{\begin{Avm}{AP}
+    \@{2} \[head & \@{H$_1$} \| \@{H$_1$} $\leq$ adj \]
+\end{Avm}}
+\newcommand{\AVMNPone}{\begin{Avm}{NP}
+    \[\tp{head-comps-ph}\\
+    conj & \@{1}\\ head & \@{H$_2$} \| \@{H$_2$} $\leq$ noun \]
+\end{Avm}}
+\newcommand{\AVMConjtwo}{\begin{Avm}{Conj}
+    \[head & \@{H$_2$} \\ comps & \<\@{3}\> \\ conj & \@{1} fie\] 
+    \end{Avm}}
+\newcommand{\AVMNPtwo}{\begin{Avm}{NP}
+    \@{3} \[head & \@{H$_2$} \| \@{H$_2$} $\leq$ noun \]
+\end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+     \begin{bundle}{\AVMXP}
+       \chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+         \begin{bundle}{\AVMAPone}
+           \chunk{\begin{bundle}{\AVMConjone}
+               \chunk{fie}
+               \end{bundle}
+           }
+           \chunk{\setlength{\GapDepth}{38pt}\begin{bundle}{\AVMAPtwo}
+               \chunk{naiv}
+             \end{bundle}}
+         \end{bundle}
+       }
+  		\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}
+         \begin{bundle}{\AVMNPone}
+           \chunk{\begin{bundle}{\AVMConjtwo}
+               \chunk{fie}
+               \end{bundle}
+           }
+           \chunk{\setlength{\GapDepth}{39pt}\begin{bundle}{\AVMNPtwo}
+               \chunk{un imbecil}
+             \end{bundle}}
+         \end{bundle}
+       }     
+  
+     \end{bundle}
+  \end{center}	
+  
+  \hspace{1.5cm}	\& unify(\fbox{H$_1$}, \fbox{H$_2$}, \fbox{H$_3$}) = \textit{nominal}
+	
+\end{figure}
+\regAvmFonts
+
+
+%\bigskip
+\newpage
+
+
+
+\noindent{\textbf{Figure 12 \hspace{1cm} Le cluster dans une hi\'erarchie de syntagmes}}
+
+\Tree[2] {&& \K[6.2]{\textit{phrase}}\Bkk{6.2,0}{0,0}{dl}\Bkk{6.2,0}{0,0}{drr}		\\
+&\K{\textit{non-hd-ph}}\B{dl}\B{dr} &&& \K{\textit{hd-ph}}\B{dl}\B{dr}\B{drrr} \\ 
+\K{\textbf{\textit{cluster-ph}}} & &  \K{\textit{coord-ph}} & \K{\textit{hd-only-ph}} && \K{\textit{hd-adj-ph}} && \K{\textit{hd-nexus-ph}}\B{dll}\B{dl}\B{d}\B{dr}\\
+& &  & && \K{\textit{hd-comps}} & \K{\textit{hd-subj}} & \K{\textit{hd-filler}} & \K{\textit{...}}}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 13 \hspace{1cm} Repr\'esentation simplifi\'ee de (264)}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPzerozero}{\begin{Avm}{XP}
+				\[\tp{cluster-ph} \\ synsem & \@{2} \[head \@{1} & \[cluster & \<\@{3}, \@{4} \> \] \] \] 
+				\end{Avm}} 
+\newcommand{\AVMNPfirstprime}{\begin{Avm}{NP}
+    \[synsem & \@{3} \[case & oblique\] \]
+\end{Avm}}
+\newcommand{\AVMNPsecondprime}{\begin{Avm}{NP}
+    \[synsem & \@{4} \[case & direct\] \] 
+    \end{Avm}}       
+    
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}
+     \begin{bundle}{\AVMXPzerozero}\setlength{\GapWidth}{70pt}\setlength{\GapDepth}{20pt}
+               \chunk{\textsc{n-hd}}{\setlength{\GapWidth}{70pt}\setlength{\GapDepth}{20pt}
+                  \begin{bundle}{\AVMNPfirstprime}
+                    \chunk{Mariei}
+                  \end{bundle}}
+               \chunk{\textsc{n-hd}}{\setlength{\GapDepth}{20pt}
+                  \begin{bundle}{\AVMNPsecondprime}
+                    \chunk{o banan\u{a}}
+                  \end{bundle}}
+            
+             
+         \end{bundle}
+       	      
+    
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 14 \hspace{1cm} Analyse de la r\'eponse courte \textit{John} dans l'approche de Ginzburg \& Sag (2000)}} 
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSfragment}{\begin{Avm}{S}
+	\[\tp{declarative-fragment-ph}\\
+	head & \[\tp{verbal} \\ 
+					 vform & finite\\
+					 ic & +\]\\
+  content & \[\tp{proposition}\\
+  				sit & s\\
+  				soa & \[quants & \< \>\\
+  				nucl & \@{2}\[\tp{leave-rel}\\
+  											leaver & \@{1}\]\]\]\\
+  background & \@{$\Sigma$$_3$}\{\textit{named}\(\@{1},\textnormal{John}\)\}\\
+  context & \[max-qud & \[\tp{question}\\
+  										params & \{\[index & \@{1}\\
+  																restr & \{\textit{person}\(\@{1}\)\}\]\}\\
+  										prop & \[\tp{proposition}\\
+  														sit & s\\
+  														soa & \[quants & \<\>\\
+  																		nucl & \@{2}\]\]\]\\
+  				sal-utt & \{\[category & \@{6}\\
+  											content \| index & \@{1}\]\}\]\]
+  \end{Avm}}
+
+\newcommand{\AVMNPfragment}{\begin{Avm}{NP}
+	\[synsem \| local & \[category & \@{6}\\
+									content \| index & \@{1}\]\\
+		background & \@{$\Sigma$$_3$} \]
+	\end{Avm}}
+	
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}
+
+\begin{bundle}{\AVMSfragment}\setlength{\GapDepth}{50pt}
+               \chunk{\textsc{hd-dtr}}{\setlength{\GapDepth}{20pt}
+                  \begin{bundle}{\AVMNPfragment}
+                    \chunk{John}
+                  \end{bundle}}
+             
+         \end{bundle}
+       	      
+    
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 15 \hspace{1cm} Le fragment dans une hi\'erarchie de syntagmes}}
+
+\Tree[2] {&& \K[6.2]{\textit{phrase}}\Bkk{6.2,0}{0,0}{dl}\Bkk{6.2,0}{0,0}{drr}		\\
+&\K{\textit{non-hd-ph}} &&& \K{\textit{hd-ph}}\B{dl}\B{dr}\B{drrr} \\ 
+ & &   & \K{\textit{hd-only-ph}}\B{d} && \K{\textit{hd-adj-ph}} && \K{\textit{hd-nexus-ph}}\B{dll}\B{dl}\B{d}\B{dr}\\
+& & & \K{\textbf{\textit{hd-fragm-ph}}} && \K{\textit{hd-comps}} & \K{\textit{hd-subj}} & \K{\textit{hd-filler}} & \K{\textit{...}}}
+
+
+\bigskip 
+
+
+
+\noindent{\textbf{Figure 16 \hspace{1cm} Repr\'esentation arborescente du fragment et de sa branche cluster}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPone}{\begin{Avm}{XP}
+        \[\tp{head-fragment-ph}\\ cat & \@{1} \]
+        \end{Avm} }
+\newcommand{\AVMXPtwo}{\begin{Avm}{XP}
+				\[\tp{cluster-ph} \\ cat \@{1} \| head & \[\tp{head} \\ cluster & nelist(synsem) & \<\@{1},\ldots, \@{n} \> \] \]  
+				\end{Avm}}        
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}
+     \begin{bundle}{\AVMXPone}\setlength{\GapDepth}{40pt}
+       \chunk{\textsc{hd-dtr}}{\setlength{\GapWidth}{45pt}
+       		\begin{bundle}{\AVMXPtwo}
+       			\chunk{\textsc{n-hd-dtr}}{\begin{Avm}{XP$_1$}
+       					\[synsem & \@{1} \]
+       						\end{Avm}}
+       			\chunk{\itshape\scshape n-hd-dtr}{\ldots}
+       			\chunk{\textsc{n-hd-dtr}}{\begin{Avm}{XP$_n$}
+       					\[synsem & \@{n} \]
+       						\end{Avm}}
+       			\end{bundle}}
+       			
+       	\end{bundle}       
+    
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 17 \hspace{1cm} Arbre simplifi\'e pour la s\'equence \textit{ainsi que Marie des fraises} en fran\c{c}ais}}
+\vspace{3mm}
+\noindent
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPthree}{\begin{Avm}{XP}
+        \[\tp{head-comps-ph}\\ head & \@{1} \\ conj & \@{C}\]
+      \end{Avm}}
+\newcommand{\AVMConjthree}{\begin{Avm}{Conj}
+        \[comps & \< \@{2} \[head&\@{1} $\neg$finite-v \]\>\\
+        conj & \@{C} ainsi-que\]
+      \end{Avm}}
+\newcommand{\AVMXPfour}{\begin{Avm}{XP}
+    \[\tp{head-fragment-ph} \\ synsem & \@{2} \[head \@{1} \] \\
+     conj & nil \] 
+    \end{Avm}}
+\newcommand{\AVMXPfive}{\begin{Avm}{XP}
+    \[\tp{cluster-ph} \\ synsem & \@{2} \[head & \@{1} \[cluster \< \@{3}, \@{4} \> \] \] \]
+\end{Avm}}
+\newcommand{\AVMNPthree}{\begin{Avm}{NP}
+    \[synsem & \@{3} \]
+\end{Avm}}
+\newcommand{\AVMNPfour}{\begin{Avm}{NP}
+    \[synsem & \@{4} \] 
+    \end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+
+\begin{center}\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+     \begin{bundle}{\AVMXPthree}
+     
+\chunk{\setlength{\GapDepth}{30pt}
+			\begin{bundle}{\AVMConjthree}
+               \chunk{ainsi-que}
+               \end{bundle}
+         }
+
+\chunk{\setlength{\GapDepth}{25pt}
+         \begin{bundle}{\AVMXPfour}
+           \chunk{\setlength{\GapDepth}{15pt}
+             \begin{bundle}{\AVMXPfive}
+               \chunk{\setlength{\GapWidth}{50pt}
+                  \begin{bundle}{\AVMNPthree}
+                    \chunk{Marie}
+                  \end{bundle}}
+               \chunk{
+                  \begin{bundle}{\AVMNPfour}
+                    \chunk{des fraises}
+                  \end{bundle}}
+             \end{bundle}
+           }
+         \end{bundle}
+       }
+     
+  
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 18 \hspace{1cm} Repr\'esentation simplifi\'ee de la phrase (273a)}}
+\noindent
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSone}{\begin{Avm}{S}
+      \end{Avm}}
+\newcommand{\AVMStwo}{\begin{Avm}{S}
+      \end{Avm}}
+\newcommand{\AVMNPfive}{\begin{Avm}{NP}
+	\[head & \@{1} \]
+      \end{Avm}}
+                
+\newcommand{\AVMV}{\begin{Avm}{V}
+    \[comps \< \[head & \@{2} nominal \] \> \]
+    \end{Avm}}
+\newcommand{\AVMAPthree}{\begin{Avm}{AP}
+   \[head & \@{3} \| \@{3} $\leq$ adj \] 
+\end{Avm}}
+
+\newcommand{\AVMXPsix}{\begin{Avm}{XP}
+    \[sal-utt & \{ \[head & \@{1} noun \], \[ head & \@{4} \] \} \]
+			\end{Avm}}
+\newcommand{\AVMXPseven}{\begin{Avm}{XP}
+			\end{Avm}}
+\newcommand{\AVMNPseven}{\begin{Avm}{NP}
+    \[head & \@{1} \]
+		\end{Avm}}
+\newcommand{\AVMNPsix}{\begin{Avm}{NP}
+    \[head & \@{4} \| \@{4} $\leq$ noun \]
+\end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+     \begin{bundle}{\AVMSone}
+\chunk{\setlength{\GapWidth}{80pt}\begin{bundle}{\AVMStwo}
+    				\chunk{\setlength{\GapDepth}{14pt}\begin{bundle}{\AVMNPfive}
+               \chunk{Ion}
+               \end{bundle}
+           		}
+ 					   
+           		\chunk{\setlength{\GapDepth}{11pt}\begin{bundle}{\AVMV}
+           				\chunk{este}
+           				\end{bundle}
+           				}
+           		\chunk{\setlength{\GapDepth}{14pt}\begin{bundle}{\AVMAPthree}
+           				\chunk{naiv}
+           				\end{bundle}
+           				}
+           		\end{bundle}
+           		}
+           
+                  
+\chunk{\setlength{\GapDepth}{17pt}
+         \begin{bundle}{\AVMXPsix}
+           \chunk{\setlength{\GapDepth}{15pt}
+             \begin{bundle}{\AVMXPseven}
+               \chunk{
+                  \begin{bundle}{\AVMNPseven}
+                    \chunk{Gheorghe}
+                  \end{bundle}}
+               \chunk{
+                  \begin{bundle}{\AVMNPsix}
+                    \chunk{un imbecil}
+                  \end{bundle}}
+             \end{bundle}
+           }
+         \end{bundle}
+       }
+     \end{bundle}
+  \end{center}
+  
+ \hspace{1cm}	\& unify(\fbox{2}, \fbox{3}, \fbox{4}) = \textit{nominal}
+  
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 19 \hspace{1cm} Repr\'esentation simplifi\'ee de la phrase (273b)}}
+\noindent
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSthree}{\begin{Avm}{(*) S}
+      \end{Avm}}
+\newcommand{\AVMSfour}{\begin{Avm}{S}
+      \end{Avm}}
+\newcommand{\AVMNPeight}{\begin{Avm}{NP}
+	\[head & \@{1} \]
+      \end{Avm}} 
+                
+\newcommand{\AVMVtwo}{\begin{Avm}{V'}
+    \[comps \< \[head & \@{2} noun \] \> \]
+    \end{Avm}}
+\newcommand{\AVMNPnine}{\begin{Avm}{NP}
+   \[head & \@{3} \| \@{3} $\leq$ noun \] 
+\end{Avm}}
+
+\newcommand{\AVMXPeight}{\begin{Avm}{XP}
+    \[sal-utt & \{ \[head & \@{1} noun \], \[ head & \@{4} \] \} \]
+			\end{Avm}}
+\newcommand{\AVMXPnine}{\begin{Avm}{XP}
+			\end{Avm}}
+\newcommand{\AVMNPten}{\begin{Avm}{NP}
+    \[head & \@{1} \]
+		\end{Avm}}
+\newcommand{\AVMAPfour}{\begin{Avm}{AP}
+    \[head & \@{4} \| \@{4} $\leq$ adj \]
+\end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{40pt}\setlength{\GapDepth}{20pt}
+     \begin{bundle}{\AVMSthree}
+\chunk{\setlength{\GapWidth}{55pt}\begin{bundle}{\AVMSfour}
+    		\chunk{\begin{bundle}{\AVMNPeight}
+               \chunk{Ion}
+               \end{bundle}
+           		}
+           		         	   
+           		\chunk{\setlength{\GapDepth}{16pt}
+           			\begin{bundle}{\AVMVtwo}
+           				\chunk{a-\^int\^alnit}
+           				\end{bundle}
+           				}
+           		\chunk{\begin{bundle}{\AVMNPnine}
+           				\chunk{un imbecil}
+           				\end{bundle}
+           				}
+           		\end{bundle}
+           		}
+         
+                  
+\chunk{\setlength{\GapDepth}{17pt}
+         \begin{bundle}{\AVMXPeight}
+           \chunk{\setlength{\GapDepth}{15pt}
+             \begin{bundle}{\AVMXPnine}
+               \chunk{\setlength{\GapDepth}{23pt}
+                  \begin{bundle}{\AVMNPten}
+                    \chunk{Gheorghe}
+                  \end{bundle}}
+               \chunk{\setlength{\GapDepth}{23pt}
+                  \begin{bundle}{\AVMAPfour}
+                    \chunk{naiv}
+                  \end{bundle}}
+             \end{bundle}
+           }
+         \end{bundle}
+       }
+     \end{bundle}
+  \end{center}
+ 
+  \hspace{1cm}	\& unify(\fbox{2}, \fbox{3}, \fbox{4}) = $\perp$
+  
+\end{figure}
+\regAvmFonts
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 20 \hspace{1cm} La construction \`a gapping dans une hi\'erarchie de syntagmes}}
+\vspace{3mm}
+
+\Tree[2] {&& \K[6.2]{\textit{phrase}}\Bkk{6.2,0}{0,0}{dl}\Bkk{6.2,0}{0,0}{drr}		\\
+&\K{\textit{hd-ph}} &&& \K{\textit{non-hd-ph}}\B{dl}\B{dr} \\
+&& & \K{\textit{coord-ph}}\B{dll}\B{drr} && \K{...}\\ 
+& \K{\fbox{MARKING}}\B{dl}\B{dr} && && \K{\fbox{CANONICITY}}\B{dl}\B{dr}\\
+ \K{\textit{simplex-coord-ph}} && \K{\textit{omnisyndetic-coord-ph}} && \K{\textit{canon-coord-ph}} && \K{\textit{non-canon-coord-ph}}\B{d}\\
+ && && &&  \K{\textbf{\textit{gapping-ph}}}}
+ 
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 21 \hspace{1cm} Arbre simplifi\'e de la phrase (277a): gapping avec pro-drop}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSseven}{\begin{Avm}{S}
+        \[\tp{coord-ph}\\ head \@{H$_0$} \textit{verbal}\\
+        ctxt \| bckgrnd & \{\ldots, \textit{sym-discourse-rel}(\@{M$_1$}, \@{M$_2$}),\ldots\}\]
+      \end{Avm}}
+\newcommand{\AVMSeight}{\begin{Avm}{S}
+        \[head&\@{H$_0$}\\
+        cont&\@{M$_1$}\]
+      \end{Avm}}
+\newcommand{\AVMVfour}{\begin{Avm}{V}
+    \[head & \@{H$_0$}\\ arg-st & \< \@{1}\[\textit{pro}\\
+    																				head & \@{H$_1$} \| \@{H$_1$} $\leq$ noun \\
+    major & + \\ cont&\@{C$_1$}\], \@{2} \>\]
+    \end{Avm}}
+\newcommand{\AVMPPone}{\begin{Avm}{PP}
+    \[ss & \@{2}\[head & \@{H$_2$} \| \@{H$_2$} $\leq$ prep \\
+    major & + \\ cont & \@{C$_2$}
+    \]\]
+\end{Avm}}
+\newcommand{\AVMXPtwelve}{\begin{Avm}{XP}
+    \[\tp{head-fragment-ph}\\
+    ctxt & \[source & \@{M$_1$} \\ sal-utt & \{\[ head & \@{H$_1$} noun\\
+    major & + \\ cont&\@{C$_1$}\], \[ head & \@{H$_2$} prep\\
+    major & + \\ cont&\@{C$_2$}\]\} \]\\
+    head & \[cluster & \<\@{3}\[head \@{H$_1$} \| \@{H$_1$} $\leq$ \textit{noun}\\ cont \@{C$_1$'} \],
+    \@{4}\[head \@{H$_2$} \| \@{H$_2$}$\leq$ \textit{prep} \\ cont \@{C$_2$'} \]\> \] \\
+    cont&\@{M$_2$} \textit{R}$_{sem}$\(\@{M$_1$}, <\@{C$_1$}, \@{C$_1$'}>, <\@{C$_2$}, \@{C$_2$'}>\)
+    \]
+\end{Avm}}
+\newcommand{\AVMXPthirteen}{\begin{Avm}{XP}
+    \[\tp{cluster-ph}\\ head \| cluster & \<\@{3}, \@{4}\> \]
+\end{Avm}}
+\newcommand{\AVMNPeleven}{\begin{Avm}{NP}
+    \[ss & \@{3}\]
+\end{Avm}}
+\newcommand{\AVMPPtwo}{\begin{Avm}{PP}
+    \[ss & \@{4}\]
+\end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{45pt}\setlength{\GapDepth}{25pt}
+     \begin{bundle}{\AVMSseven}
+       \chunk{\setlength{\GapWidth}{140pt}\setlength{\GapDepth}{80pt}
+         \begin{bundle}{\AVMSeight}
+           \chunk{\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVfour}
+               \chunk{merg}
+               \end{bundle}
+           }
+           \chunk{\setlength{\GapDepth}{42pt}\begin{bundle}{\AVMPPone}
+               \chunk{la film}
+             \end{bundle}}
+         \end{bundle}
+       }
+       \chunk{\setlength{\GapDepth}{55pt}
+         \begin{bundle}{\AVMXPtwelve}
+           \chunk{\setlength{\GapDepth}{20pt}
+             \begin{bundle}{\AVMXPthirteen}
+               \chunk{
+                  \begin{bundle}{\AVMNPeleven}
+                    \chunk{sora mea}
+                  \end{bundle}}
+               \chunk{
+                  \begin{bundle}{\AVMPPtwo}
+                    \chunk{la muzeu}
+                  \end{bundle}}
+             \end{bundle}
+           }
+         \end{bundle}
+       }
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+
+\noindent{\textbf{Figure 22 \hspace{1cm} Arbre simplifi\'e de la phrase (277b): gapping avec affixe pronominal}}
+
+\newpage
+\begin{landscape}
+
+
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSnine}{\begin{Avm}{S}
+        \[\tp{coord-ph}\\ head \@{H$_0$} \textit{verbal}\\
+        ctxt \| bckgrnd & \{\ldots, \textit{sym-discourse-rel}(\@{M$_1$}, \@{M$_2$}),\ldots\}\]
+      \end{Avm}}
+\newcommand{\AVMSten}{\begin{Avm}{S}
+        \[head&\@{H$_0$}\\
+        cont&\@{M$_1$}\]
+      \end{Avm}}
+\newcommand{\AVMNPtwelve}{\begin{Avm}{NP}
+    \[ss & \@{1}\]
+			\end{Avm}}
+\newcommand{\AVMVfive}{\begin{Avm}{V}
+    \[head & \@{H$_0$}\\ arg-st & \< \@{1}NP,	\@{2}\[\tp{pron-affix}\\ head & \@{H$_1$} \| \@{H$_1$} $\leq$ noun \\
+    major & + \\ cont&\@{C$_1$}\], \@{3} \>\]
+    \end{Avm}}
+\newcommand{\AVMNPthirteen}{\begin{Avm}{NP}
+    \[ss & \@{3}\[head & \@{H$_2$} \| \@{H$_2$} $\leq$ noun \\
+    major & + \\ cont&\@{C$_2$}
+    \]\]
+\end{Avm}}
+\newcommand{\AVMXPfourteen}{\begin{Avm}{XP}
+    \[\tp{head-fragment-ph}\\
+    ctxt & \[source & \@{M$_1$} \\ sal-utt & \{\[ head & \@{H$_1$} noun\\
+    major & + \\ cont & \@{C$_1$}\], \[ head & \@{H$_2$} noun\\
+    major & + \\ cont & \@{C$_2$} \]\}\]\\
+    head & \[cluster & \<\@{4}\[head \@{H$_1$} \| \@{H$_1$} $\leq$ \textit{noun}\\ cont \@{C$_1$'} \],
+    \@{5}\[head \@{H$_2$} \| \@{H$_2$} $\leq$ \textit{noun} \\ cont \@{C$_2$'} \]\> \] \\
+    cont&\@{M$_2$} \textit{R}$_{sem}$\(\@{M$_1$}, <\@{C$_1$}, \@{C$_1$'}>, <\@{C$_2$}, \@{C$_2$'}>\)
+    \]
+\end{Avm}}
+\newcommand{\AVMXPfifteen}{\begin{Avm}{XP}
+    \[\tp{cluster-ph}\\ head \| cluster & \<\@{4}, \@{5}\> \]
+\end{Avm}}
+\newcommand{\AVMNPfourteen}{\begin{Avm}{NP}
+    \[ss & \@{4}\]
+\end{Avm}}
+\newcommand{\AVMNPfifteen}{\begin{Avm}{NP}
+    \[ss & \@{5}\]
+\end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{30pt}\setlength{\GapDepth}{40pt}
+     \begin{bundle}{\AVMSnine}
+       \chunk{\setlength{\GapWidth}{150pt}\setlength{\GapDepth}{90pt}
+         \begin{bundle}{\AVMSten}
+         \chunk{\setlength{\GapDepth}{54pt}\begin{bundle}{\AVMNPtwelve}
+               \chunk{Ion}
+               \end{bundle}
+           }
+           \chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMVfive}
+               \chunk{mi-e}
+               \end{bundle}
+           }
+           \chunk{\setlength{\GapDepth}{37pt}\begin{bundle}{\AVMNPthirteen}
+               \chunk{prieten}
+             \end{bundle}}
+         \end{bundle}
+       }
+       \chunk{\setlength{\GapWidth}{30pt}\setlength{\GapDepth}{80pt}
+         \begin{bundle}{\AVMXPfourteen}
+           \chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{30pt}
+             \begin{bundle}{\AVMXPfifteen}
+               \chunk{\setlength{\GapDepth}{15pt}
+                  \begin{bundle}{\AVMNPfourteen}
+                    \chunk{\c{t}ie}
+                  \end{bundle}}
+               \chunk{\setlength{\GapDepth}{15pt}
+                  \begin{bundle}{\AVMNPfifteen}
+                    \chunk{du\c{s}man}
+                  \end{bundle}}
+             \end{bundle}
+           }
+         \end{bundle}
+       }
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+\end{landscape}
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 23 \hspace{1cm} Arbre simplifi\'e de la phrase (277c)}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSfive}{\begin{Avm}{S}
+        \[\tp{coord-ph}\\ head \@{H$_0$} \textit{verbal}\\
+        ctxt \| bckgrnd & \{\ldots, \textit{sym-discourse-rel}(\@{M$_1$}, \@{M$_2$}),\ldots\}\]
+      \end{Avm}}
+\newcommand{\AVMSsix}{\begin{Avm}{S}
+        \[head&\@{H$_0$}\\
+        cont&\@{M$_1$}\]
+      \end{Avm}}
+\newcommand{\AVMVthree}{\begin{Avm}{V}
+    \[head & \@{H$_0$}\\ arg-st & \< \@{1}\textit{pro}, \@{2}\[\tp{adv-affix}\\
+    head & \@{H$_1$} \| \@{H$_1$} $\leq$ adv \\
+    major & + \\ cont&\@{C$_1$} \], \@{3} \>\]
+    \end{Avm}}
+\newcommand{\AVMAdv}{\begin{Avm}{AdvP}
+    \[ss & \@{3}\[head & \@{H$_2$} \| \@{H$_2$} $\leq$ adv \\
+    major & + \\ cont&\@{C$_2$}
+    \]\]
+\end{Avm}}
+\newcommand{\AVMXPten}{\begin{Avm}{XP}
+    \[\tp{head-fragment-ph}\\
+    ctxt & \[source & \@{M$_1$} \\ sal-utt & \{\[ head & \@{H$_2$} adv$\lor$prep\\
+    major & + \\ cont&\@{C$_2$}\], \[ head & \@{H$_1$} adv\\
+    major & + \\ cont&\@{C$_1$}\] \}\] \\
+    head & \[cluster & \<\@{4}\[head \@{H$_2$} \| \@{H$_2$} $\leq$ \textit{prep}\\ cont \@{C$_2$'} \],
+    \@{5}\[head \@{H$_1$} \| \@{H$_1$}$\leq$ \textit{adv} \\ cont \@{C$_1$'} \]\>\] \\
+    cont & \@{M$_2$} \textit{R}$_{sem}$\(\@{M$_1$}, <\@{C$_1$}, \@{C$_1$'}>, <\@{C$_2$}, \@{C$_2$'}>\)
+    \]
+\end{Avm}}
+\newcommand{\AVMXPeleven}{\begin{Avm}{XP}
+    \[\tp{cluster-ph}\\ head \| cluster & \<\@{4}, \@{5}\> \]
+\end{Avm}}
+\newcommand{\AVMPP}{\begin{Avm}{PP}
+    \[ss & \@{4}\]
+\end{Avm}}
+\newcommand{\AVMAdvtwo}{\begin{Avm}{AdvP}
+    \[ss & \@{5}\]
+\end{Avm}}
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{25pt}
+     \begin{bundle}{\AVMSfive}
+       \chunk{\setlength{\GapWidth}{140pt}\setlength{\GapDepth}{80pt}
+         \begin{bundle}{\AVMSsix}
+           \chunk{\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVthree}
+               \chunk{mai merg}
+               \end{bundle}
+           }
+           \chunk{\setlength{\GapDepth}{45pt}\begin{bundle}{\AVMAdv}
+               \chunk{acas\u{a}}
+             \end{bundle}}
+         \end{bundle}
+       }
+       \chunk{\setlength{\GapDepth}{60pt}
+         \begin{bundle}{\AVMXPten}
+           \chunk{\setlength{\GapDepth}{20pt}
+             \begin{bundle}{\AVMXPeleven}
+               \chunk{
+                  \begin{bundle}{\AVMPP}
+                    \chunk{la socri}
+                  \end{bundle}}
+               \chunk{
+                  \begin{bundle}{\AVMAdvtwo}
+                    \chunk{niciodat\u{a}}
+                  \end{bundle}}
+             \end{bundle}
+           }
+         \end{bundle}
+       }
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 24a \hspace{1cm} Coordination de phrases}}
+\vspace{3mm}
+\noindent
+
+\Tree[1]{ && \K[5.2]{S[coord]}\Bkk{5.2,0}{0,0}{dl}_{N-HD}		
+										 \Bkk{5.2,0}{0,0}{drr}^{N-HD} \\
+&\K{S}\TRi		&&			 &\K{S}\TRi \\ 
+&\K{vine Ion azi}	&& &\K{\c{s}i Maria m\^aine}	
+				}			
+
+
+\bigskip		
+
+
+
+\noindent{\textbf{Figure 24b \hspace{1cm} Coordination sous-phrastique de clusters}}
+\vspace{3mm}
+\noindent 				
+
+\Tree[1]{ && \K[5.2]{S}\Bkk{5.2,0}{0,0}{dl}_{HD}		
+										 \Bkk{5.2,0}{0,0}{drr}^{COMPS} \\
+&\K{V}\TRi		&&			 &\K{XP[coord]}\TRi \\ 
+&\K{vine}	&& &\K{Ion azi \c{s}i Maria m\^aine}	
+				}	
+
+
+\bigskip	
+
+
+
+\noindent{\textbf{Figure 25 \hspace{1cm} Syntaxe simplifi\'ee des coordinations de s\'equences avec \textit{iar}}
+\vspace{3mm}
+\noindent 
+
+\Tree[1]{ &&&& \K{S[coord]}\B{dll}_{N-HD}		
+										 \B{drrr}^{N-HD} \\
+&&\K{S}\B{dll}_{HD}\B{d}^{COMPS}	
+										 \B{drr} && &&& \K{XP}\B{dl}_{HD}\B{dr}^{COMPS}\\
+\K{V}\B{d} && \K{NP}\TRi && \K{NP}\TRi && \K{Conj}\B{d} && \K{XP}\B{d}_{HD} \\
+\K{\^ii dau} && \K{Mariei} && \K{o carte} && \K{iar} && \K{XP}\B{dl}_{N-HD}\B{dr}^{N-HD}\\ 
+&&&&&&&\K{NP}\TRi && \K{NP}\TRi\\
+&&&&&&& \K{Ioanei} && \K{un stilou} 
+									 }
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 26 \hspace{1cm} Syntaxe simplifi\'ee des coordinations de clusters avec \textit{\c{s}i}}
+\vspace{3mm}
+\noindent 
+
+\Tree[1]{&& \K{S}\B{dll}_{HD}\B{drr}^{COMPS} \\
+\K{V}\B{d} && && \K{XP[coord]}\B{dll}_{N-HD}\B{drr}^{N-HD}\\
+\K{\^ii dau} && \K{XP}\B{dl}_{N-HD}\B{dr}^{N-HD} && && \K{XP}\B{dl}_{HD}\B{dr}^{COMPS}\\
+&  \K{NP}\TRi && \K{NP}\TRi && \K{Conj}\B{d} && \K{XP}\B{dl}_{N-HD}\B{dr}^{N-HD}\\
+& \K{Mariei} && \K{o carte} && \K{\c{s}i} & \K{NP}\TRi && \K{NP}\TRi\\
+& && && & \K{Ioanei} && \K{un stilou}
+}
+			
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 27 \hspace{1cm} Repr\'esentation simplifi\'ee de la phrase (326)}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSeleven}{\begin{Avm}{S}
+\[subj & \<\>\\ comps & \<\>\]
+      \end{Avm}}
+\newcommand{\AVMVsix}{\begin{Avm}{V}
+\[subj & \<\> \\ comps & \<\@{4}\[cluster & \<NP$_{acc}$\>  \, $\oplus$ \<NP$_{dat}$\>\]\>\]
+      \end{Avm}}
+\newcommand{\AVMXPsixteen}{\begin{Avm}{XP}
+    \@{4}\[\tp{simplex-coord-ph}\\ head & \[cluster & \<NP$_{acc}$\> \, $\oplus$ \<NP$_{dat}$\>\]\\ coord & +\]
+			\end{Avm}}
+			
+\newcommand{\AVMXPseventeen}{\begin{Avm}{XP}
+\[\tp{cluster-ph}\\ head & \[cluster & \<\@{1}NP$_{acc}$\> \, $\oplus$ \<\@{2}NP$_{dat}$\>\]\]
+			\end{Avm}}
+\newcommand{\AVMNPsixteen}{\begin{Avm}{NP}
+    \[synsem & \@{1} \]
+		\end{Avm}}
+\newcommand{\AVMNPseventeen}{\begin{Avm}{NP}
+    \[synsem & \@{2} \]
+\end{Avm}}
+
+\newcommand{\AVMXPeighteen}{\begin{Avm}{XP}
+\[\tp{head-comps-ph}\\ head & \[cluster & \<\@{3}NP$_{acc}$\> \, $\oplus$ \<\@{4}NP$_{dat}$\>\] \\ conj & et\]
+			\end{Avm}}
+\newcommand{\AVMConjfour}{\begin{Avm}{Conj}
+		\end{Avm}}
+\newcommand{\AVMXPnineteen}{\begin{Avm}{XP}
+\[\tp{cluster-ph}\\ head & \[cluster & \<\@{3}NP$_{acc}$\> \, $\oplus$ \<\@{4}NP$_{dat}$\>\]\]
+			\end{Avm}}
+\newcommand{\AVMNPeighteen}{\begin{Avm}{NP}
+    \[synsem & \@{3} \]
+		\end{Avm}}
+\newcommand{\AVMNPnineteen}{\begin{Avm}{NP}
+    \[synsem & \@{4} \]
+\end{Avm}}
+
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{0pt}\setlength{\GapDepth}{30pt}
+     \begin{bundle}{\AVMSeleven}
+\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVsix}
+               \chunk{\^ii dau}
+               \end{bundle}
+           		}                          
+\chunk{\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{40pt}
+         \begin{bundle}{\AVMXPsixteen}
+           \chunk{
+             \begin{bundle}{\AVMXPseventeen}
+             	\chunk{\setlength{\GapDepth}{25pt}
+             		\begin{bundle}{\AVMNPsixteen}
+             			\chunk{o carte}
+             		\end{bundle}}
+             	\chunk{\setlength{\GapDepth}{25pt}
+             		\begin{bundle}{\AVMNPseventeen}
+             			\chunk{Mariei}
+             			\end{bundle}}
+             	 \end{bundle}}
+             	 
+          	\chunk{
+          	 \begin{bundle}{\AVMXPeighteen}
+          	   \chunk{\setlength{\GapDepth}{16pt}
+          	   	\begin{bundle}{\AVMConjfour}
+          	   		\chunk{\c{s}i}
+          	   		 \end{bundle}}
+          	   \chunk{
+          	   	\begin{bundle}{\AVMXPnineteen}
+             	\chunk{\setlength{\GapDepth}{25pt}
+             		\begin{bundle}{\AVMNPeighteen}
+             			\chunk{un stilou}
+             		\end{bundle}}
+             	\chunk{\setlength{\GapDepth}{25pt}
+             		\begin{bundle}{\AVMNPnineteen}
+             			\chunk{Ioanei}
+             			\end{bundle}}
+             	 \end{bundle}}
+             	\end{bundle}}
+             
+           \end{bundle}}
+        
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\newpage
+
+
+
+\noindent{\textbf{Figure 28 \hspace{1cm} Repr\'esentation simplifi\'ee de la phrase (328)}}
+
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMStwelve}{\begin{Avm}{S}
+\[subj & \<\>\\ comps & \<\>\]
+      \end{Avm}}
+\newcommand{\AVMVseven}{\begin{Avm}{V}
+\[subj & \<\> \\ comps & \<\@{4}\[cluster & \<NP$_{acc}$\>  \, $\oplus$ \<(NP$_{dat}$)\> \]\>\] 
+      \end{Avm}}
+\newcommand{\AVMXPtwenty}{\begin{Avm}{XP}
+    \@{4}\[\tp{simplex-coord-ph}\\ head & \[cluster & \<NP$_{acc}$\> \, $\oplus$ \<(NP$_{dat}$)\> \]\\ coord & +\]
+			\end{Avm}}
+			
+\newcommand{\AVMXPtwentyone}{\begin{Avm}{XP}
+\[\tp{cluster-ph}\\ head & \[cluster & \<\@{1}NP$_{acc}$\> \, $\oplus$ elist\]\]
+			\end{Avm}}
+\newcommand{\AVMNPtwenty}{\begin{Avm}{NP}
+    \[synsem & \@{1} \]
+		\end{Avm}}
+
+\newcommand{\AVMXPtwentytwo}{\begin{Avm}{XP}
+\[\tp{head-comps-ph}\\ head & \[cluster & \<\@{2}NP$_{acc}$\> \, $\oplus$ \<\@{3}NP$_{dat}$\>\] \\ conj & et\]
+			\end{Avm}}
+\newcommand{\AVMConjfive}{\begin{Avm}{Conj}
+		\end{Avm}}
+\newcommand{\AVMXPtwentythree}{\begin{Avm}{XP}
+\[\tp{cluster-ph}\\ head & \[cluster & \<\@{2}NP$_{acc}$\> \, $\oplus$ \<\@{3}NP$_{dat}$\>\]\]
+			\end{Avm}}
+\newcommand{\AVMNPtwentyone}{\begin{Avm}{NP}
+    \[synsem & \@{2} \]
+		\end{Avm}}
+\newcommand{\AVMNPtwentytwo}{\begin{Avm}{NP}
+    \[synsem & \@{3} \]
+\end{Avm}}
+
+
+\smallAvmFonts
+\begin{figure}
+  \begin{center}\setlength{\GapWidth}{30pt}\setlength{\GapDepth}{30pt}
+     \begin{bundle}{\AVMStwelve}
+\chunk{\setlength{\GapWidth}{80pt}\setlength{\GapDepth}{20pt}\begin{bundle}{\AVMVseven}
+               \chunk{voi scrie}
+               \end{bundle}
+           		}                          
+\chunk{\setlength{\GapWidth}{65pt}\setlength{\GapDepth}{40pt}
+         \begin{bundle}{\AVMXPtwenty}
+           \chunk{
+             \begin{bundle}{\AVMXPtwentyone}
+             	\chunk{\setlength{\GapDepth}{25pt}
+             		\begin{bundle}{\AVMNPtwenty}
+             			\chunk{tema}
+             		\end{bundle}}
+            
+             	 \end{bundle}}
+             	 
+          	\chunk{
+          	 \begin{bundle}{\AVMXPtwentytwo}
+          	   \chunk{\setlength{\GapDepth}{16pt}
+          	   	\begin{bundle}{\AVMConjfive}
+          	   		\chunk{\c{s}i}
+          	   		 \end{bundle}}
+          	   \chunk{
+          	   	\begin{bundle}{\AVMXPtwentythree}
+             	\chunk{\setlength{\GapDepth}{25pt}
+             		\begin{bundle}{\AVMNPtwentyone}
+             			\chunk{o scrisoare}
+             		\end{bundle}}
+             	\chunk{\setlength{\GapDepth}{25pt}
+             		\begin{bundle}{\AVMNPtwentytwo}
+             			\chunk{mamei}
+             			\end{bundle}}
+             	 \end{bundle}}
+             	\end{bundle}}
+             
+           \end{bundle}}
+        
+     \end{bundle}
+  \end{center}
+\end{figure}
+\regAvmFonts
+
+
+\bigskip
+
+
+
+\noindent{\textbf{Figure 29a \hspace{1cm} Ellipse syntaxique}}
+					
+\Tree[0.5]{ && \K[4.2]{S}\Bkk{4.2,0}{0,0}{dl}		
+										 \Bkk{4.2,0}{0,0}{drr} \\
+&\K{S}\TRi		&&			 &\K{S}\TRi \\ 
+&\K{Paul viendra lundi}	&& &\K{Jean \st{viendra} mardi}	
+				}	
+
+
+\bigskip
+
+
+				
+\noindent{\textbf{Figure 29b \hspace{1cm} Ellipse s\'emantique}}
+					
+\Tree[0.5]{ && \K[4.2]{S}\Bkk{4.2,0}{0,0}{dl}		
+										 \Bkk{4.2,0}{0,0}{drr} \\
+&\K{S}\TRi		&&			 &\K{XP$^+$}\B{dl}\B{dr} \\ 
+&\K{Paul viendra lundi}	&& \K{NP}\B{d} && \K{NP}\B{d}\\
+&&&\K{Jean} && \K{mardi}	
+				}
+
+
+\bigskip
+
+
+				
+\noindent{\textbf{Figure 29c \hspace{1cm} Analyse sans ellipse}}
+
+\Tree{ & \K{TP}\B{dl}\B{drr}		\\
+\K{NP}\B{ddd}	&&			& \K[4.2]{T'}\Bkk{4.2,0}{0,0}{dl}		
+										 \Bkk{4.2,0}{0,0}{drr}  \\
+						&& \K{T}\B{dd} & & & \K[4.2]{VP}\Bkk{4.2,0}{0,0}{dl}		
+										 \Bkk{4.2,0}{0,0}{drr} \\
+						&&&& \K{VP}\TRi & &  & \K{VP}\TRi\\
+\K{Paul$_p$} && \K{viendra$_q$} & & \K{t$_p$ t$_q$ lundi} &&& \K{Jean t$_q$ mardi}
+						}
+
+
+
+\end{document}

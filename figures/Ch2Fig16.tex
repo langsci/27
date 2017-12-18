@@ -1,0 +1,43 @@
+\documentclass[preview]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMXPone}{\begin{Avm}{XP}
+		\[\tp{head-fragment-ph}\\ cat & \@{1} \]
+\end{Avm} }
+\newcommand{\AVMXPtwo}{\begin{Avm}{XP}
+		\[\tp{cluster-ph} \\ cat \@{1} \| head & \[\tp{head} \\ cluster & nelist(synsem) & \<\@{1},\ldots, \@{n} \> \] \]  
+\end{Avm}}        
+
+\smallAvmFonts
+%\begin{figure}
+\begin{center}
+		\begin{bundle}{\AVMXPone}\setlength{\GapDepth}{40pt}
+			\chunk[HD-DTR]{\setlength{\GapWidth}{45pt}
+				\begin{bundle}{\AVMXPtwo}
+					\chunk[N-HD-DTR]{\begin{Avm}{XP$_1$}
+							\[synsem & \@{1} \]
+					\end{Avm}}
+					\chunk[N-HD-DTR]{\ldots}
+					\chunk[N-HD-DTR]{\begin{Avm}{XP$_n$}
+							\[synsem & \@{n} \]
+					\end{Avm}}
+			\end{bundle}}
+			
+		\end{bundle}       
+		
+\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

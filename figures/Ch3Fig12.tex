@@ -1,0 +1,102 @@
+\documentclass[varwidth,border={2pt 2pt 3cm 0cm}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSone}{\begin{Avm}{S}
+		\[\tp{head-functor-ph}\] 
+\end{Avm}}
+
+\newcommand{\AVMStwo}{\begin{Avm}{S}
+		\[ss & \@{2}\[cont & \[ind & \@{6} \\ rels & \@{9}\] \] \]
+\end{Avm}}
+
+\newcommand{\AVMNPfive}{\begin{Avm}{NP$_i$}
+		\[cont & \[ind & \@{4}\] \] 
+\end{Avm}}
+
+\newcommand{\AVMVone}{\begin{Avm}{V} 
+\end{Avm}}
+
+\newcommand{\AVMXPnine}{\begin{Avm}{XP}
+		\[ss & \[cat & \[head & \@{1} \[select & \@{2}\[ cont \[ anchors & \<\[ind & \@{4}\]\>\]\]\] \\
+		mrkg & \@{10} \] \\
+		cont & \[ind & \@{7}\]\\
+		c-cont & \[rels & \<\[\tp{sum-subpart-rel}\\ 
+		subpart & \@{7} event\\
+		sum & \@{6} event\]\>\] \\
+		rel & \{\@{4}\}\] \]
+\end{Avm}}
+
+\newcommand{\AVMPPthree}{\begin{Avm}{PP}
+		\[ss &\[cat & \[head & \[select & \@{3} \] \\
+		mrkg & \@{10} \]\\
+		cont & \[ltop & \@{5} \\ rels & \<\[\tp{sum-subpart-rel} \\ label & \@{5} \\ subpart & \@{8} \\ sum & \@{4} \] \> \] \\
+		rel & \{\@{4}\}\] \]
+\end{Avm}}
+
+\newcommand{\AVMXPten}{\begin{Avm}{XP}
+		\[ss &\@{3}\[cat \[head & \@{1}\] \\ 
+		cont \[ind  \@{7}\\
+		anchors & \<\[ind & \@{8}\]\>\]\\
+		fragment \[source \[ind & \@{6} \\ rels & \@{9}\]\\
+		abstract-cont \@{B}\]\] \]
+\end{Avm}}
+
+\newcommand{\AVMXPtenbis}{\begin{Avm}{XP} 
+\end{Avm}}
+\newcommand{\AVMNPthird}{\begin{Avm}{NP} 
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}[hbcd]
+%	\begin{center}
+		\setlength{\GapDepth}{25pt}
+		\begin{bundle}{\AVMSone}     	  			
+			\chunk[HD]{
+				\begin{bundle}{\AVMStwo}
+					\chunk[SUBJ]{
+						\begin{bundle}{\AVMNPfive}
+							\chunk{plusieurs personnes}
+					\end{bundle}}
+					
+					\chunk[HD]{
+						\begin{bundle}{\AVMVone}
+							\chunk{chantent}
+					\end{bundle}}
+			\end{bundle}}
+			\newline
+			
+			\chunk[FCT]{\setlength{\GapWidth}{110pt}\setlength{\GapDepth}{30pt}
+				\begin{bundle}{\AVMXPnine}
+					\chunk[FCT]{\setlength{\GapWidth}{30pt}
+						\begin{bundle}{\AVMPPthree}
+							\chunk{parmi}
+							\chunk{lesquelles$_i$}
+					\end{bundle}}
+					\chunk[HD]{\setlength{\GapWidth}{20pt}\setlength{\GapDepth}{15pt}
+						\begin{bundle}{\AVMXPten}
+							\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMXPtenbis}
+									\chunk{\setlength{\GapDepth}{15pt}\begin{bundle}{\AVMNPthird}
+											\chunk{Marie}
+									\end{bundle}}
+							\end{bundle}}
+					\end{bundle}}	 
+			\end{bundle}}
+			
+		\end{bundle}
+		
+%	\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

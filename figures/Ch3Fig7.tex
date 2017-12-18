@@ -1,0 +1,20 @@
+\documentclass[]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\noindent
+\Tree[2]{ & \K[5.2]{\textit{phrase}}\Bkk{5.2,0}{0,0}{dl}\Bkk{5.2,0}{0,0}{dr}		\\
+	\K{\textit{non-hd-ph}}	&			 & \K[5.2]{\textit{hd-ph}}\Bkk{5.2,0}{0,0}{dl}\Bkk{5.2,0}{0,0}{dr}\Bkk{5.2,0}{0,0}{drrrr}  \\
+	& \K{\textit{hd-only-ph}}\B{d} & &   \K{\textit{hd-adj-ph}}\B{d}\B{dr} &&& \K{\textit{hd-nexus-ph}}\B{dl}\B{dr}\B{drr}\\
+	& \K{\textit{hd-fragm-ph}} && \K{\textbf{\textit{hd-funct-ph}}} & \K{\textit{...}} & \K{\textit{hd-comps-ph}} && \K{\textit{hd-subj-ph}} & \K{\textit{...}}}
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass[float,border={2pt 2pt 40pt 0cm}]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine-type1}
+\usepackage{latexsym}
+\usepackage{ecltree+}
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+
+\usepackage{xyling}
+
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+\regAvmFonts\avmoptions{center}
+\newcommand{\AVMSfive}{\begin{Avm}{S}
+		\[\tp{head-functor-ph}\] 
+\end{Avm}}
+
+\newcommand{\AVMSsix}{\begin{Avm}{S}
+		\[\tp{head-subject-ph} \\ ss & \@{2}\[cont & \[ind & \@{6}\] \] \]
+\end{Avm}}
+
+\newcommand{\AVMNPnine}{\begin{Avm}{NP}
+		\[ss & \[cont & \[ind & \@{4}\] \] \] 
+\end{Avm}}
+
+\newcommand{\AVMVthree}{\begin{Avm}{V} 
+\end{Avm}}
+
+\newcommand{\AVMXPeleven}{\begin{Avm}{XP}
+		\[\tp{head-functor-ph} \\ ss & \[cat & \[head \@{1} & \[select & \@{2} \] \\ mrkg & dont \] \] \]
+\end{Avm}}
+
+\newcommand{\AVMYPone}{\begin{Avm}{?P}
+		\[ss & \[cat & \[head & \[select & \[cat \[head \| select \@{7} \| cont \[anchors & \<\[ind & \@{4}\]\> \] \] \\ cont \[anchors & \<\[ind & \@{3}\]\> \] \] \] \\ mrkg & dont\] \\
+		cont & \[ltop & \@{5} \\ rels & \<\[\tp{sum-subpart-rel} \\ label & \@{5} \\ subpart & \@{3} \\ sum & \@{4} \] \> \] \] \]
+\end{Avm}}
+
+\newcommand{\AVMXPtwelve}{\begin{Avm}{XP}
+		\[\tp{head-fragment-phrase}\\ ss & \@{7}\[cat & \[head & \@{1}\] \\ cont & \[ind & \@{3}\]\] \]
+\end{Avm}}
+
+\newcommand{\AVMXPtwelvebis}{\begin{Avm}{XP} 
+\end{Avm}}
+\newcommand{\AVMNPfourth}{\begin{Avm}{NP} 
+\end{Avm}}
+
+\smallAvmFonts
+%\begin{figure}[hbcd]
+%	\begin{center}
+		\setlength{\GapWidth}{50pt}\setlength{\GapDepth}{25pt}
+		\begin{bundle}{\AVMSfive}     	  			
+			\chunk[HD]{\setlength{\GapWidth}{10pt}
+				\begin{bundle}{\AVMSsix}
+					\chunk[SUBJ]{\setlength{\GapDepth}{15pt}
+						\begin{bundle}{\AVMNPnine}
+							\chunk{plusieurs personnes}
+					\end{bundle}}
+					
+					\chunk[HD]{\setlength{\GapDepth}{19pt}
+						\begin{bundle}{\AVMVthree}
+							\chunk{chantent}
+					\end{bundle}}
+			\end{bundle}}
+			
+			\chunk[FCT]{\setlength{\GapWidth}{200pt}\setlength{\GapDepth}{80pt}
+				\begin{bundle}{\AVMXPeleven}
+					\chunk[FCT]{\setlength{\GapWidth}{100pt}\setlength{\GapDepth}{40pt}
+						\begin{bundle}{\AVMYPone}
+							\chunk{dont}
+					\end{bundle}}
+					\chunk[HD]{\setlength{\GapWidth}{130pt}\setlength{\GapDepth}{15pt}
+						\begin{bundle}{\AVMXPtwelve}
+							\chunk{\setlength{\GapDepth}{15pt}
+								\begin{bundle}{\AVMXPtwelvebis}
+									\chunk{\setlength{\GapDepth}{15pt}
+										\begin{bundle}{\AVMNPfourth}
+											\chunk{Marie}
+									\end{bundle}}
+							\end{bundle}}
+					\end{bundle}}	 
+			\end{bundle}}
+			
+		\end{bundle}
+		
+%	\end{center}
+%\end{figure}
+\regAvmFonts
+\end{document}

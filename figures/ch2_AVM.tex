@@ -1,0 +1,355 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine}
+
+\usepackage{fullpage}
+
+\usepackage{xyling}
+
+\usepackage{avm}
+\usepackage{avm+}
+
+\usepackage{combelow}
+
+\usepackage{tree-dvips}
+%\usepackage{qtree}
+\usepackage{soul} %for strikethrough font
+
+\begin{document}
+
+\bigskip
+
+\noindent{\textbf{(245) \hspace{1cm} R\`egles du gapping dans Culicover \& Jackendoff (2005)}
+\vspace{3mm}
+
+\noindent
+Syntaxe:
+\begin{avm}
+[XP$_{i}$$^{ORPHAN1}$ YP$_{j}$$^{ORPHAN2}$]$^{IL}$
+\end{avm}\\	
+Structure conceptuelle (CS):	
+\begin{avm}
+[$\mathcal{F}$([X$_{i}$\\c-focus], [Y$_{j}$\\c-focus])]
+\end{avm}	
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(246) \hspace{1cm} La s\'emantique du gapping dans Culicover \& Jackendoff (2005)}	
+\vspace{3mm}
+
+\noindent
+\begin{avm}
+[[speak ([robin\\c-focus], [french\\c-focus])] and[$\mathcal{F}$([leslie\\c-focus], [german\\c-focus])]]
+\end{avm}	
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(247) \hspace{1cm} Principe de conservation des arguments}
+\vspace{3mm}
+
+\noindent
+\textit{word} $\Rightarrow$
+\begin{avm}
+[valence  & [subj & @1\\
+						spr & @2\\
+						comps & @3]\\
+ arg-st & @1 $\oplus$ @2 $\oplus$ @3 $\bigcirc$ list\(non-canonical\)] 
+\end{avm}	
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(249) \hspace{1cm} Repr\'esentation simplifi\'ee de la phrase}
+\vspace{3mm}
+
+\noindent
+\textit{clause} $\Rightarrow$ 
+\begin{avm}
+[cat & [val & [subj & <>\\
+               comps & <>\\
+               spr <>]]\\
+cont & message]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(250) \hspace{1cm} Entr\'ee lexicale d'une conjonction}}
+\vspace{1mm}
+
+\noindent
+\textit{conj-word} $\Rightarrow$
+\begin{avm}
+[category & [head&@{1}\\
+						marking&@{2}\\
+						valence & [subj&@{3}\\
+											 spr&@{4}\\
+											 comps & <[head&@{1}\\
+											 					marking&@{2}\\
+											 					subj&@{3}\\
+											 					spr&@{4}\\
+											 					comps&@{5}\\
+											 					conj&nil]> & $\oplus$ & @{5}]\\
+						conj&$\neg$nil]]
+						\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(251) \hspace{1cm} R\`egle g\'en\'erale de la coordination}}
+\vspace{3mm}
+
+\noindent
+\textit{coord-phrase} $\Rightarrow$ \textit{non-headed-ph} \&
+\begin{avm}
+[dtrs & <$sign$, $sign$> \, $\oplus$ list($sign$)]
+\end{avm}
+\& \\
+\begin{avm}
+[synsem & [conj & nil]\\
+ dtrs & list([conj & nil]) \, $\oplus$  <[conj @1 & $\neg$nil],..., [conj & @1]   >]
+ \end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(252) \hspace{1cm} Syntagme de type \textit{simplex-coord-ph}}}
+\vspace{3mm}
+
+\noindent
+\textit{simplex-coord-phrase} $\Rightarrow$ \textit{coord-ph} \& \\
+\begin{avm}
+[dtrs & <[conj & nil]> \, $\oplus$ list($sign$) \, $\oplus$ <[conj & $\neg$nil] >]
+ \end{avm}
+
+\bigskip
+
+		
+\noindent{\textbf{(253) \hspace{1cm} Syntagme de type \textit{omnisyndetic-coord-ph}}}
+\vspace{3mm}
+
+\noindent
+\textit{omnisyndetic-coord-phrase} $\Rightarrow$ \textit{coord-ph} \& \\
+\begin{avm}
+[dtrs & <[conj & $\neg$nil] \, $\oplus$ & list($sign$) >]
+ \end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(254) \hspace{1cm} Syntagme de type \textit{asyndetic-coord-ph}}}
+\vspace{3mm}
+
+\noindent
+\textit{asyndetic-coord-phrase} $\Rightarrow$ \textit{coord-ph} \& \\
+\begin{avm}
+[dtrs & list($sign$) \, $\oplus$ <[conj & nil]> ]
+ \end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(258) \hspace{1cm} Contraintes de parall\'elisme dans les constructions coordonn\'ees}}
+\vspace{3mm}
+
+\noindent
+\textit{coord-phrase} $\Rightarrow$
+\begin{avm}
+[synsem & [head / @H\\
+						 valence @V\\
+						 slash @S]\\
+ dtrs & <[head / @H\\
+					valence @V\\
+					slash @S],...,
+					[head / @H\\
+					valence @V\\
+					slash @S]>]
+\end{avm}	
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(262) \hspace{1cm} Syntagme de type \textit{cluster}}}
+\vspace{3mm}
+
+\noindent
+\textit{cluster-ph} $\Rightarrow$ \textit{non-headed-ph} \& \\
+\begin{avm}
+[head & [\tp{head}\\
+				 cluster & nelist\(synsem\) <@{1}, ..., @{n}>]\\
+subj & < >\\
+spr & < > \\
+comps & < >\\
+slash & $\Sigma$$_1$ $\cup$ ... $\cup$ $\Sigma$$_n$\\
+n-hd-dtrs & <[synsem @{1} [slash & $\Sigma$$_1$]], ..., [synsem @{n} [slash & $\Sigma$$_n$]]>]
+ \end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(268) \hspace{1cm} Le syntagme de type fragment dans Ginzburg \& Sag (2000)}}
+\vspace{3mm}
+
+\noindent
+\begin{avm}
+[\tp{head-fragment-ph} \\
+category | head & [\tp{verbal} \\ vform & finite] \\
+content & message \\
+context | sal-utt & \{[category @1 \\ content | index & @2]\}] $\longrightarrow$ [category @1 [head & nominal] \\ content | index @2]
+\end{avm}
+
+
+\bigskip 
+
+
+
+\noindent{\textbf{(271) \hspace{1cm} Contrainte syntaxique du \textit{head-fragment-ph}}
+\vspace{3mm}
+
+\noindent
+\textit{head-fragment-ph} $\Rightarrow$
+\begin{avm}
+[context | sal-utt \{[head @{H$_1$} \\ major + ],..., [head @{H$_n$} \\ major + ]\} \\
+category | head | cluster <[head & @{H$_1$}],..., [head & @{H$_n$}]>]
+\end{avm}  
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(275) \hspace{1cm} Contrainte s\'emantique du \textit{head-fragment-ph}}
+\vspace{3mm}
+
+\noindent 
+\textit{head-fragment-ph} $\Rightarrow$
+\begin{avm}[context [source & message @{M} \\ sal-utt & \{[content & @{C$_1$}],..., [content & @{C$_n$}]\}]\\
+category | head [\tp{head}\\ cluster & <[content & @{C$_1$'}],..., [content & @{C$_n$'}]>]\\
+content \textit{R}$_{sem}$(@{M}, <@{C$_1$}, @{C$_1$'}>,..., <@{C$_n$}, @{C$_n$'}>)]
+\end{avm} 
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(276) \hspace{1cm} La construction \`a gapping}
+\vspace{3mm}
+
+\noindent
+\textit{gapping-ph} $\Rightarrow$ \textit{coord-ph} \& \\
+\begin{avm} 
+[head @{H} \textit{verbal}\\
+context | background \{..., \textit{sym-discourse-rel}(@{M$_1$},..., @{M$_j$}, @{M$_{j+1}$},..., @{M$_n$}), ...\}\\
+dtrs <[head @{H} [\tp{verbal}\\
+									  cluster & elist]\\
+content @{M$_1$}],..., [head @{H} [\tp{verbal}\\
+									  cluster & elist]\\
+content @{M$_j$}]> \, $\oplus$ \\
+
+<[head [cluster & <@1,..., @n >]\\ source @{M$_j$}\\ content @{M$_{j+1}$}],..., [head [cluster & <@{1'},..., @{n'} >]\\ source @{M$_j$}\\ content @{M$_{n}$}]>]  
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(322) \hspace{1cm} Syntagme de type \textit{cluster}}}
+\vspace{3mm}
+
+\noindent
+\textit{cluster-ph} $\Rightarrow$ \textit{non-headed-ph} \& \\
+\begin{avm}
+[head & [\tp{head}\\
+				 cluster & nelist\(synsem\) <@{1}, ..., @{n}>]\\
+subj & < >\\
+spr & < > \\
+comps & < >\\
+slash & $\Sigma$$_1$ $\cup$ ... $\cup$ $\Sigma$$_n$\\
+n-hd-dtrs & <[synsem @{1} [slash & $\Sigma$$_1$]], ..., [synsem @{n} [slash & $\Sigma$$_n$]]>]
+ \end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(323) \hspace{1cm} R\`egle lexicale pour la compl\'ementation alternative des pr\'edicats}}
+\vspace{3mm}
+
+\noindent
+\begin{avm}
+[\tp{cluster-coord-lexical-rule}\\
+input & [\tp{word}\\
+				comps @{L$_1$} + & @{L$_2$} nelist <[cat & @{1}], ..., [cat & @{n}]>]\\
+output & [\tp{word}\\
+				comps @{L$_1$} + & <[coord + \\
+													cluster <[cat & @{1}], ..., [cat & @{n}]>]>]]\end{avm}\\
+\begin{avm}												
+\& @{L$_2$} $\neq$ <[coord +\\ cluster & nelist\(synsem\)]>		
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(327) \hspace{1cm} Entr\'ees lexicales du verbe \textit{a da} 'donner'}}
+\vspace{3mm}
+
+\noindent
+\textit{a da}$_1$: 
+\begin{avm}
+[comps <NP$_{acc}$> &  $\oplus$ <NP$_{dat}$>]
+\end{avm}\\
+\textit{a da}$_2$: 
+\begin{avm}
+[comps <[coord +\\ cluster <NP$_{acc}$> &  $\oplus$ <NP$_{dat}$>]>]
+\end{avm}
+
+
+\bigskip
+
+
+
+\noindent{\textbf{(329) \hspace{1cm} Entr\'ees lexicales du verbe \textit{a scrie} '\'ecrire'}}
+\vspace{3mm}
+
+\noindent
+\textit{a scrie}$_1$: 
+\begin{avm}
+[comps <NP$_{acc}$> &  $\oplus$ <(NP$_{dat}$)> ]
+\end{avm}\\
+\textit{a scrie}$_2$: 
+\begin{avm}
+[comps <[coord +\\ cluster <NP$_{acc}$> &  $\oplus$ <(NP$_{dat}$)>]>]
+\end{avm}
+
+
+
+						  				
+										  				
+\end{document}

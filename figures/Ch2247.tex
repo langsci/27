@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\textit{word} $\Rightarrow$
+ \begin{avm}
+[valence  & [subj & @1\\
+						spr & @2\\
+						comps & @3]\\
+ arg-st & @1 $\oplus$ @2 $\oplus$ @3 $\bigcirc$ list\(non-canonical\)] 
+\end{avm}
+\end{document}

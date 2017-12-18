@@ -1,0 +1,31 @@
+\documentclass[varwidth]{standalone}
+\usepackage{etoolbox}
+\usepackage{libertine}
+\let\B\OldB
+\let\T\OldT
+\undef\T
+\undef\B
+\usepackage{xyling}
+\let\B\xylingB
+\let\T\xylingT
+\let\OldB\B
+\let\OldT\T
+\usepackage{avm}
+\usepackage{avm+}
+\usepackage{combelow}
+\usepackage{tree-dvips}
+% \usepackage{qtree}
+% \usepackage{soul} %for strikethrough font
+
+\begin{document}
+\begin{avm}
+[\tp{cluster-coord-lexical-rule}\\
+input & [\tp{word}\\
+				comps @{L$_1$} + & @{L$_2$} nelist <[cat & @{1}], ..., [cat & @{n}]>]\\
+output & [\tp{word}\\
+				comps @{L$_1$} + & <[coord + \\
+													cluster <[cat & @{1}], ..., [cat & @{n}]>]>]]\end{avm}\\
+\begin{avm}												
+$\&$ @{L$_2$} $\neq$ <[coord +\\ cluster & nelist\(synsem\)]>		
+\end{avm}
+\end{document}
